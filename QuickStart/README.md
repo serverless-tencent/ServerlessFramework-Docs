@@ -1,4 +1,8 @@
-### 快速入门
+---
+title: '快速入门'
+menuText: '快速入门'
+layout: Doc
+---
 
   - [下载安装](./installation)
   - [权限配置](./credential)
