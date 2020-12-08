@@ -1,4 +1,9 @@
-### 高级能力
+---
+title: '高级能力'
+menuText: '高级能力'
+layout: Doc
+---
+
 
   - [函数触发器配置](./trigger)
   - [自定义域名及 HTTPS 访问配置](./customdomain)
