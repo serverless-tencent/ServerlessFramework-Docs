@@ -1,4 +1,9 @@
-### Serverless Framework 产品文档
+---
+title: 'Serverless Framework 产品文档'
+menuText: 'Serverless Framework 产品文档'
+layout: Doc
+---
+
 
 - [产品简介](./introduction)
 - [组件介绍](./components)
