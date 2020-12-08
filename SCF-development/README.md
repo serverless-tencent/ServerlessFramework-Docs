@@ -1,4 +1,8 @@
-### 函数应用开发
+---
+title: '函数应用开发'
+menuText: '函数应用开发'
+layout: Doc
+---
 
   - [项目结构](./architecture)
   - [yml 规范](./yml)
