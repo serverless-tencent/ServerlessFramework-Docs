@@ -7,13 +7,13 @@ layout: Doc
 安装完成后，我们可以通过 Serverless Framework 的初始化指令，快速创建一个 SCF 云函数模版并完成部署。
 
 ### 前提条件
-- 已经 [安装 Serverless Framework 1.67.2](https://github.com/AprilJC/Serverless-Framework-Docs/blob/main/docs/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85.md) 以上版本。
+- 已经 [安装 Serverless Framework 1.67.2](./installation) 以上版本。
    ```
    npm install -g serverless
    ```
 - 已经[注册腾讯云账号](https://cloud.tencent.com/document/product/378/17985)并完成[实名认证](https://cloud.tencent.com/document/product/378/10495)。
 
-  > 如果您的账户为**腾讯云子账号**，请首先联系主账号，参考 [账号和权限配置](https://github.com/AprilJC/Serverless-Framework-Docs/blob/main/docs/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E6%9D%83%E9%99%90%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.md#%E5%AD%90%E8%B4%A6%E5%8F%B7%E6%9D%83%E9%99%90%E9%85%8D%E7%BD%AE) 进行授权。
+  > 如果您的账户为**腾讯云子账号**，请首先联系主账号，参考 [账号和权限配置](./credential) 进行授权。
 
 ### 快速部署
 
@@ -122,7 +122,7 @@ sls deploy
 ### 持续开发
 部署完成后，Serverless Framework 支持通过不同指令，帮助您完成项目的持续开发部署、灰度发布等能力，您也可以结合其它组件一起使用，完成多组件应用的部署管理。
 
-详情请参考文档[构建应用](https://github.com/AprilJC/Serverless-Framework-Docs/blob/main/docs/%E5%87%BD%E6%95%B0%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E6%9E%84%E5%BB%BA%E5%BA%94%E7%94%A8.md)与[支持命令列表](https://github.com/AprilJC/Serverless-Framework-Docs/blob/main/docs/%E5%87%BD%E6%95%B0%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E9%80%9A%E7%94%A8%E6%8C%87%E4%BB%A4%E4%BB%8B%E7%BB%8D.md)。
+详情请参考文档[构建应用](../scf-development/create)与[支持命令列表](../scf-development/command)。
 
 ### 常见问题 Q&A
 - 问题1：输入 `serverless` 时没有默认弹出中文引导。
