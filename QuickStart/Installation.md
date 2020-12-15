@@ -80,5 +80,5 @@ serverless -v
 ```
 
 **下一步：快速开始**
-   - [部署第一个函数应用](./quickstart-fun)
-   - [部署第一个 Express 框架应用](./quickstart-frame)
+   - [部署第一个函数应用](./quickStart-fun)
+   - [部署第一个 Express 框架应用](./quickStart-frame)
