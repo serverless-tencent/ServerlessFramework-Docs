@@ -4,7 +4,7 @@ menuText: '远程调试'
 layout: Doc
 ---
 
-> 当前该指令只支持通过 Serverless Framework 云函数组件部署的函数项目，其它组件的支持也在计划中
+> 当前该指令只支持通过 [Serverless Framework 云函数组件](https://github.com/serverless-components/tencent-scf)部署的函数项目，其它组件的支持也在计划中
 
 Serverless Framework 云函数组件支持通过 `invoke` 命令触发云函数进行调试。对于`sls deploy`部署成功的云函数，进入对应函数的项目目录下，执行函数调用命令，即可完成云上函数资源的远程调试，调试结果会在命令行进行输出：
 
