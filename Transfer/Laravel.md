@@ -34,31 +34,7 @@ serverless init laravel-starter --name example
 cd example
 ```
 
-### 2. 修改 Laravel 项目
-由于云函数在执行时，只有 `/tmp` 可读写的，所以我们需要将 `laravel` 框架运行时的 `storage` 目录写到该目录下，为此需要修改 `bootstrap/app.php` 文件，在 `$app = new Illuminate\Foundation\Application` 后添加：
-
-```php
-$app->useStoragePath(env('APP_STORAGE', '/tmp'));
-```
-
-然后在根目录下的 `.env` 文件中新增如下配置:
-
-```dotenv
-# 视图文件编译路径
-VIEW_COMPILED_PATH=/tmp/storage/framework/views
-
-# 由于是无服务函数，所以没法存储 session 在硬盘上，如果不需要 sessions，可以使用 array
-# 如果需要你可以将 session 存储到 cookie 或者数据库中
-SESSION_DRIVER=array
-
-# 建议将错误日志输出到控制台，方便云端去查看
-LOG_CHANNEL=stderr
-
-# 应用的 storage 目录必须为 /tmp
-APP_STORAGE=/tmp
-```
-
-### 3. 配置 yml 文件
+### 2. 配置 yml 文件
 在项目根目录下，新建 `serverless.yml` 文件，并将下列配置模版粘贴到文件中，实现基本的项目配置。
 >基于您实际部署需要，您可以在 `serverless.yml` 中完成更多配置，yml 文件的配置信息请参考[ Laravel 组件全量配置](https://github.com/serverless-components/tencent-laravel/blob/master/docs/configure.md)
 
@@ -86,7 +62,7 @@ inputs:
     environment: release
 ```
 
-### 4. 应用部署
+### 3. 应用部署
 通过 `sls deploy` 命令进行部署，并可以添加 --debug 参数查看部署过程中的信息。
 
 ```
@@ -94,5 +70,5 @@ sls deploy --debug
 ```
 部署完成后，通过访问输出的 API 网关链接，完成对应用的访问。
 
-### 5. 监控运维
+### 4. 监控运维
 部署完成后，您可以通过访问 [Serverless 应用控制台](https://console.cloud.tencent.com/ssr)，查看应用的基本信息，监控日志。
