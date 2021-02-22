@@ -54,7 +54,6 @@ egg 组件的 yml 文件示例如下，全量配置文件可参考 [Eggjs 组件
 ```yml
 # serverless.yml
 app: app-demo #应用名称，同一个应用下每个组件的 app,stage,org 参数必须保持一一致
-org: app-demo
 stage: dev
 component: egg 
 name:  app-demo-egg # (必填) 创建的实例名称

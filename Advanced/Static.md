@@ -106,7 +106,6 @@ export default {
 3. 在 `serverless.yml` 中`，新增静态资源相关配置 staticConf，如下：
 
 ```
-org: orgDemo
 app: appDemo
 stage: dev
 component: nextjs
