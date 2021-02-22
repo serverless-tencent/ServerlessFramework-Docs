@@ -38,7 +38,6 @@ serverless create --template-url https://github.com/serverless/components/tree/v
 
 component: scf 
 name: apidemo 
-org: test 
 app: scfApp 
 stage: dev 
 
