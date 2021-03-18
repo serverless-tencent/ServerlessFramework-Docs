@@ -1,6 +1,6 @@
 ---
-title: '产品介绍'
-menuText: '产品介绍'
+title: 'Serverless 介绍'
+menuText: 'Serverless 介绍'
 layout: Doc
 ---
 
