@@ -1,24 +1,57 @@
 ---
-title: "Serverless 介绍"
-menuText: "Serverless 介绍"
+title: "Serverless Framework 介绍"
+menuText: "Serverless Framework 介绍"
 layout: Doc
 ---
 
-Serverless Framework 是业界非常受欢迎的无服务器应用框架，开发者无需关心底层资源，即可部署完整的 Serverless 应用架构。Serverless Framework 具有资源编排、自动伸缩、事件驱动等能力，覆盖编码、调试、测试、部署等全生命周期，帮助开发者通过联动云资源，迅速构建 Serverless 应用。
+Serverless Framework 是业界非常受欢迎的无服务器应用框架，通过与众多一流云供应商如腾讯云，AWS 等的紧密合作，为广大开发者提供无需关心底层基础设施，即可编写和部署代码的无服务开发体验。
 
-Serverless Framework 主要支持以下几个开发场景：
+Serverless Framework 同时提供资源管理、自动伸缩、统计分析等能力，让广大开发者可以节省运维成本，真正做到“按量付费”的同时，也无需花费精力处理日志收集，异常统计等任务。
 
-- **基于云函数的命令行开发工具**
+Serverless Framework 通过 CLI 工具与腾讯云紧密合作，为中国用户提供了基于组件(serverless components)的完整解决方案。覆盖了无服务应用编码、测试、部署，等全生命周期，同时更符合中国用户的使用场景和习惯。
 
-  通过 Serverless Framework，开发者可以在命令行完成函数的开发、部署、调试。还可以结合前端服务、 API 网关、数据库等其它云上资源，实现全栈应用的快速部署。
+## 开始使用
 
-  点击此处[快速开始部署第一个函数应用](./quickstart/function-dev)。
+通过 Serverless CLI 工具可以创建，调试，部署，查看，移除 serverless 应用，马上[安装 Serverless CLI](./quickstart/installation.md) 并使用。
 
-- **传统应用框架的快速迁移**
+### 函数应用开发
 
-  Serverless Framework 提供了一套通用的框架迁移方案，通过使用 Serverless Framework 提供的框架组件（Egg/Koa/Express 等），原有应用仅需几行代码简单改造，即可快速迁移到函数平台。同时支持命令行与控制台的开发方式。
+Serverless 为函数应用开发者提供了一个统一的开发框架，通过 serverelss 开发者可以快速开发，调试，部署。结合静态站点，API网关，数据库等其他云上资源，函数应用拥有更强大的能力和使用场景。
 
-  点击此处[快速开始部署第一个框架应用](./quickstart/components-dev)。
+开始 [使用 serverless 开发函数应用](./quickstart/function-dev.md)
+
+### 传统应用开发
+
+Serveless 为使用传统框架(如：Nextjs, Express, Django等)开发的应用提供了运行环境支持，通过 serverless 开发者可以继续使用传统框架开发应用，也可以通过简单改造将原有应用迁移到 serverless 平台。
+
+开始 [使用 serverless 开发传统应用](./quickstart/components-dev.md)
+
+### SaaS 应用托管
+
+Serverless 为使用 SaaS 应用(如：Wordpress等)提供了方便的运行环境支持，通过 serverless 简单配置就可以部署并开始使用 SaaS 应用，也无需担心应用的后续维护和升级。
+
+## 独特优势
+
+### 热启动
+
+### 弹性伸缩
+
+### 一站式开发
+
+## 概念区分
+
+
+### Serverless Components
+
+Serverless Components 是支持多个云资源编排和组织的场景化解决方案，主要基于客户的具体场景，如 Express 框架支持、网站部署等。Serverless Components 可以有效简化云资源的配置和管理，将网关、COS 和 CAM 等产品联动起来，让客户更多关注场景和业务。
+
+详细介绍可以参考 [Github 上的 Serverless Components 项目](https://github.com/serverless/components/blob/master/README.cn.md)。
+
+### Serverless Traditional(Plugin)
+
+Serverless Plugin功能已经不在中国版本中进行支持，相关函数开发请使用 serverelss 组件(components)的SCF components。
+
+--- 待整理 ---
 
 ### 产品优势
 
@@ -38,9 +71,7 @@ Serverless Framework 主要支持以下几个开发场景：
 
 ## Components
 
-Serverless Components 是支持多个云资源编排和组织的场景化解决方案，主要基于客户的具体场景，如 Express 框架支持、网站部署等。Serverless Components 可以有效简化云资源的配置和管理，将网关、COS 和 CAM 等产品联动起来，让客户更多关注场景和业务。
 
-详细介绍可以参考 [Github 上的 Serverless Components 项目](https://github.com/serverless/components/blob/master/README.cn.md)。
 
 ### Serverless Components 优势
 
@@ -56,31 +87,3 @@ Serverless Components 可以通过非常简单的`serverless.yml`创建和部署
 
 大多数 Serverless Components 比传统的配置工具部署快 20 倍左右，Components 可以通过快速的部署和远端验证，有效减少本地模拟和调试的环节。
 
-### Serverless Components 支持列表
-
-当前 Serverless Components 支持丰富的多语言开发框架和应用，具体如下：
-
-**基础组件**：
-
-- [@serverless/tencent-postgresql](https://github.com/serverless-components/tencent-postgresql/tree/master) - 腾讯云 PG DB Serverless 数据库组件
-- [@serverless/tencent-apigateway](https://github.com/serverless-components/tencent-apigateway) - 腾讯云 API 网关组件
-- [@serverless/tencent-cos](https://github.com/serverless-components/tencent-cos) - 腾讯云对象存储组件
-- [@serverless/tencent-scf](https://github.com/serverless-components/tencent-scf/tree/master) - 腾讯云云函数组件
-- [@serverless/tencent-cdn](https://github.com/serverless-components/tencent-cdn) - 腾讯云 CDN 组件
-- [@serverless/tencent-vpc](https://github.com/serverless-components/tencent-vpc/tree/master) - 腾讯云 VPC 私有网络组件
-- [@serverless/tencent-layer](https://github.com/serverless-components/tencent-layer/tree/master) - 腾讯云 Layer 组件
-
-**高阶组件**：
-
-- [@serverless/tencent-nextjs](https://github.com/serverless-components/tencent-nextjs/tree/master) - 快速部署基于 Next.js 框架到腾讯云函数的组件
-- [@serverless/tencent-nuxtjs](https://github.com/serverless-components/tencent-nuxtjs/tree/master) - 快速部署基于 Nuxt.js 框架到腾讯云函数的组件
-- [@serverless/tencent-express](https://github.com/serverless-components/tencent-express/tree/master) - 快速部署基于 Express.js 的后端服务到腾讯云函数的组件
-- [@serverless/tencent-egg](https://github.com/serverless-components/tencent-egg/tree/master) - 快速部署基于 Egg.js 的后端服务到腾讯云函数的组件
-- [@serverless/tencent-koa](https://github.com/serverless-components/tencent-koa/tree/master) - 快速部署基于 Koa.js 的后端服务到腾讯云函数的组件
-- [@serverless/tencent-flask](https://github.com/serverless-components/tencent-flask) - 腾讯云 Python Flask RESTful API 组件
-- [@serverless/tencent-django](https://github.com/serverless-tencent/tencent-django/tree/master) - 腾讯云 Python Django RESTful API 组件
-- [@serverless/tencent-laravel](https://github.com/serverless-components/tencent-laravel) - 腾讯云 PHP Laravel RESTful API 组件
-- [@serverless/tencent-thinkphp](https://github.com/serverless-components/tencent-thinkphp) - 腾讯云 ThinkPHP RESTful API 组件
-- [@serverless/tencent-website](https://github.com/serverless-components/tencent-website/tree/master) - 快速部署静态网站到腾讯云的组件
-
-此外，所有的 Serverless Components 均可在 [Github 仓库](https://github.com/serverless-components?q=tencent) 中查看，查看时请注意切换至最新的**v2**版本。
