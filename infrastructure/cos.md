@@ -4,6 +4,8 @@ menuText: "COS 对象存储"
 layout: Doc
 ---
 
+<!-- TODO: 更新COS使用说明和配置示例。 -->
+
 ## 操作场景
 
 对象存储 COS 组件是 serverless-tencent 组件库中的基础组件之一。通过对象存储 COS 组件，可以快速且方便的创建、配置和管理腾讯云的 COS 存储桶。

@@ -5,6 +5,6 @@ layout: Doc
 ---
 
 - [安装并使用](./installation)
-- [函数应用开发](./function-dev)
-- [组件应用开发](./components-dev)
-- [腾讯云配置](./tencent-cloud)
+- [开发函数应用](./function-dev)
+- [开发组件应用](./components-dev)
+- [腾讯云配置](./tencent-console)

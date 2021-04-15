@@ -4,6 +4,8 @@ menuText: "Hexo 博客"
 layout: Doc
 ---
 
+<!-- TODO: 检查并更新教程 -->
+
 ## 操作场景
 
 该任务指导您通过 Serverless Website 组件，快速构建一个 Serverless Hexo 站点。

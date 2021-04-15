@@ -4,6 +4,8 @@ menuText: "组件应用开发"
 layout: Doc
 ---
 
+<!-- TODO: 更新组件开发教程 -->
+
 ## 操作场景
 
 该任务指导您通过 Serverless Framework，在腾讯云上快速创建、配置和部署一个 Web 框架应用。

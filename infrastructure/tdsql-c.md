@@ -4,6 +4,8 @@ menuText: "TDSQL-C 数据库"
 layout: Doc
 ---
 
+<!-- TODO: 更新tdsql-c使用说明和配置示例。 -->
+
 ## 操作场景
 
 该教程指导您通过 Serverless Framework 组件，快速创建一个 TDSQL-C Serverless 数据库实例。

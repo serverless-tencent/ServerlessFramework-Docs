@@ -4,6 +4,7 @@ menuText: "函数应用开发"
 layout: Doc
 ---
 
+- [函数 CLI 命令](./function-commands)
 - [Node.js 函数应用开发](./nodejs)
 - [Python 函数应用开发](./python)
 - [Golang 函数应用开发](./golang)

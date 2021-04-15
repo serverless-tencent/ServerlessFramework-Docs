@@ -4,6 +4,8 @@ menuText: "VPC 私有网络"
 layout: Doc
 ---
 
+<!-- TODO: 更新vpc使用说明和配置示例。 -->
+
 ## 操作场景
 
 腾讯云 VPC 组件支持通过`serverless.yml`配置，快速创建指定名称的私有网络和子网，并输出 VPCID 和 SubnetID，便于配置其他组件所需的网络信息。

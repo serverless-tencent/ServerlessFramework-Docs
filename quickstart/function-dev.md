@@ -4,18 +4,21 @@ menuText: "函数应用开发"
 layout: Doc
 ---
 
-## 操作场景
+<!-- TODO: 先使用SCF进行函数开发，后续匹配Function 开发功能 -->
 
-该任务指导您通过 Serverless Framework，在腾讯云上快速创建、配置和部署一个 SCF 云函数应用。
+通过 Serverless CLI 的交互命令可以快速创建一个 Serverless 项目，函数项目请选择 `scf-starter`。
+
+> 与国际版本不同，Serverless 中国通过 SCF 组件实现了国际版的函数开发功能。同时用户可以使方便的整合更多的腾讯云基础设施。详细说明请查看[函数开发说明文档](../function/README.md)。
 
 ## 操作步骤
 
-### 快速部署
+### 快速创建项目
 
 在**空文件夹**目录下，执行如下指令：
 
 ```sh
-serverless
+# 使用 serverless 交互命令新建项目
+$ sls
 ```
 
 接下来按照交互提示，完成项目初始化，应用请选择 `scf-starter` 模版，并选择您希望用的运行时（此处以 Node.js 为例）：
@@ -82,7 +85,8 @@ triggers:
 部署完毕后，通过以下指令，完成函数的远程调用：
 
 ```sh
-sls invoke --inputs function=helloworld
+# 远程函数调用
+$ sls invoke --inputs function=helloworld
 ```
 
 > ?sls 是 serverless 命令的简写。
@@ -91,9 +95,11 @@ sls invoke --inputs function=helloworld
 
 如果希望再次查看应用的部署状态和资源，可以进入到部署成功的文件夹，运行如下命令，查看对应信息：
 
-```
-cd demo #进入项目目录，此处请改为您的项目目录名称
-sls info
+```sh
+#进入项目目录，此处请改为您的项目目录名称
+$ cd demo
+
+$ sls info
 ```
 
 ### 查看目录结构
@@ -115,8 +121,9 @@ sls info
 
 在本地项目目录下，您可以对函数模版项目内容与配置文件进行修改，并通过以下指令进行重新部署：
 
-```
-sls deploy
+```sh
+# 部署项目代码到云服务器
+$ sls deploy
 ```
 
 > ?如需查看移除过程中的详细信息，可以增加 `--debug` 参数进行查看。

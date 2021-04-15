@@ -4,6 +4,8 @@ menuText: "静态资源集成"
 layout: Doc
 ---
 
+<!-- TODO: 更新 静态页面 说明 -->
+
 > 该配置只支持 **Next.js** 和 **Nuxt.js** 组件。
 
 ## 操作场景

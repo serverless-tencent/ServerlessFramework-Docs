@@ -4,6 +4,8 @@ menuText: "自动集成"
 layout: Doc
 ---
 
+<!-- TODO: 更新 CI/CD 说明 -->
+
 ## 操作场景
 
 在 Serverless 应用开发中，我们需要手动执行部署命令将开发项目部署到云端。通过引入一些 CI 能力进行 Serverless 应用的自动化部署。

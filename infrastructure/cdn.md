@@ -4,6 +4,8 @@ menuText: "CDN 内容分发"
 layout: Doc
 ---
 
+<!-- TODO: 更新CDN使用说明和配置示例。 -->
+
 ## 操作场景
 
 腾讯云 CDN 组件是 serverless-tencent 组件库中的基础组件之一。通过 CDN 组件，您可以快速方便的创建、配置和管理腾讯云的 CDN 产品。

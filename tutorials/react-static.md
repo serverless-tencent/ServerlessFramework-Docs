@@ -4,6 +4,8 @@ menuText: "React 静态站点"
 layout: Doc
 ---
 
+<!-- TODO: 检查并更新教程 -->
+
 ## 操作场景
 
 **腾讯云 Website 静态网站组件**通过使用 [Tencent Serverless Framework](https://github.com/serverless/components/tree/cloud)，基于云上 Serverless 服务（如对象存储等），实现“0”配置，便捷开发，极速部署您的静态网站，Website 静态网站组件支持丰富的配置扩展，如自定义域名和 CDN 加速等。提供了目前最易用、低成本并且弹性伸缩的静态站点开发和托管能力。

@@ -1,100 +1,86 @@
 ---
-title: "欢迎使用 serverless"
-menuText: "欢迎使用 serverless"
+title: "开始使用 serverless"
+menuText: "开始使用 serverless"
 layout: Doc
 ---
 
 # 欢迎使用 serverless ⚡️
 
-您可以通过 [NPM 安装](#npm) 或 [二进制安装](#binary) 的方式，快速安装 Serverless Framework。
+您可以通过 Serverless CLI 命令行工具来 创建，开发，调试，部署，管理，删除你的 Serverless 应用。
 
-## 安装方式
+通过 [NPM 安装](#npm) 或 [二进制安装](#binary) 方式，来安装 Serverless CLI 并开始 Serverless 开发。
+
+## 安装&升级 Serverless CLI
 
 <span id="npm"></span>
 
-### 方式一：NPM 安装
+### 通过 npm
 
-#### 安装前提
-
-使用 npm 安装前，需要确定您的环境中已安装好了 Node(版本需要 > 10) 以及 npm，查看 [Node.js 安装指南](https://nodejs.org/zh-cn/download/) 。
+npm 是 Node.js 的包管理工具, 安装前需要确定您的环境中已安装好了 Node.js (版本 > 10)，更多请查看 [Node.js 安装指南](https://nodejs.org/zh-cn/download/) 。
 
 ```sh
-$ node -v
-v12.18.0
+# 使用 npm 全局安装 serverless 命令行工具
+$ npm install -g serverless
 
-$ npm -v
-7.0.10
+# 使用 cnpm 及镜像全局安装 serverless 命令行工具
+$ npm install -g cnpm --registry=https://registry.npm.taobao.org
+$ cnpm install -g serverless
+
+# 升级 serverless 命令行到最新版本
+$ npm update -g serverless
 ```
 
-> 注：为保证安装速度和稳定性，建议您使用 cnpm 来完成安装，通过命令 `npm install -g cnpm --registry=https://registry.npm.taobao.org` 安装 cnpm，然后将下面所有使用的 npm 命令替换为 cnpm 即可
-
-#### 安装步骤
-
-在命令行中运行如下命令：
-
-```sh
-npm install -g serverless
-```
-
-> ?如 MacOS 提示无权限，则需要运行`sudo npm install -g serverless`进行安装。
-
-如果之前您已经安装过 Serverless Framework，可以通过以下命令升级到最新版。
-
-```sh
-npm update -g serverless
-```
-
-#### 查看版本信息
-
-安装完毕后，通过运行`serverless -v`命令，查看 Serverless Framework 的版本信息：
-
-```sh
-serverless -v
-```
+> 如 MacOS 提示无权限，则通过添加 `sudo` 运行相关命令，如：`sudo npm install -g serverless` 进行安装。
 
 <span id="binary"></span>
 
-### 方式二：二进制安装
+### 通过安装包
 
-如果您的本地环境没有安装 Node.js，您可以直接使用二进制的方式进行安装：
+如果您的本地环境没有安装 Node.js，您可以直接使用安装包进行安装：
 
 #### MacOS/Linux 系统
 
 打开命令行，输入以下命令：
 
 ```sh
-curl -o- -L https://slss.io/install | bash
-```
+# 通过安装包进行安装
+$ curl -o- -L https://slss.io/install | bash
 
-如果之前您已经安装过二进制版本，可以通过下列命令进行升级：
-
-```sh
-serverless upgrade
+# 使用 serverless 的升级命令来升级到最新版本
+$ serverless upgrade
 ```
 
 #### Windows 系统
 
-Windows 系统支持通过 [chocolatey](https://chocolatey.org/) 进行安装。打开命令行，输入以下命令：
+对于 Windows 用户建议通过 [chocolatey](https://chocolatey.org/) 进行安装。
 
 ```sh
-choco install serverless
+# 通过 choco 进行安装
+$ choco install serverless
+
+# 通过 choco 升级到最新版本
+$ choco upgrade serverless
 ```
 
-如果之前您已经安装过二进制版本，可以通过下列命令进行升级：
+## 查看版本信息
+
+安装完成后，可以通过执行`serverless -v`命令，来检查安装的 serverless 命令行工具版本信息：
 
 ```sh
-choco upgrade serverless
+# 查看系统当前 serverless 版本信息
+$ serverless -v
 ```
 
-#### 查看版本信息
+安装成功后可以出现如下的版本信息。
 
-安装完毕后，通过运行 `serverless -v` 命令，查看 Serverless Framework 的版本信息：
-
-```sh
-serverless -v
+```
+Framework Core: 2.33.1
+Plugin: 4.5.3
+SDK: 4.2.2
+Components: 3.8.2
 ```
 
-**下一步：快速开始**
+**下一步：开始开发**
 
-- [部署第一个函数应用](./function-dev)
-- [组件应用开发](./components-dev)
+- [开发函数应用](./function-dev)
+- [开发组件应用](./components-dev)

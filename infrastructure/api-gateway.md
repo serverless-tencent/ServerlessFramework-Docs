@@ -4,6 +4,8 @@ menuText: "API 网关组件"
 layout: Doc
 ---
 
+<!-- TODO: 更新网关使用说明和配置示例。 -->
+
 ## 操作场景
 
 API 网关组件是 serverless-tencent 组件库中的基础组件之一，您可以通过该组件快速且方便地创建、配置和管理腾讯云的 API 网关产品。
@@ -16,16 +18,16 @@ API 网关组件是 serverless-tencent 组件库中的基础组件之一，您�
 
 通过 npm 安装 Serverless：
 
-```console
-npm install -g serverless
+```sh
+$ npm install -g serverless
 ```
 
 ### 配置
 
 本地创建 `serverless.yml` 文件：
 
-```console
-touch serverless.yml
+```sh
+$ touch serverless.yml
 ```
 
 在 `serverless.yml` 中进行如下配置：
@@ -80,8 +82,8 @@ sls remove
 
 当前默认支持 CLI 扫描二维码登录，如您希望配置持久的环境变量/密钥信息，也可以本地创建 `.env` 文件：
 
-```shell
-touch .env # 腾讯云的配置信息
+```sh
+$ touch .env # 腾讯云的配置信息
 ```
 
 在 `.env` 文件中配置腾讯云的 SecretId 和 SecretKey 信息并保存：
@@ -92,7 +94,5 @@ TENCENT_SECRET_ID=123
 TENCENT_SECRET_KEY=123
 ```
 
-> ?
->
 > - 如果没有腾讯云账号，请先 [注册新账号](https://cloud.tencent.com/register)。
 > - 如果已有腾讯云账号，可以在 [API 密钥管理](https://console.cloud.tencent.com/cam/capi) 中获取 SecretId 和 SecretKey。

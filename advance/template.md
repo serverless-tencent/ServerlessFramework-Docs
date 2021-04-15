@@ -4,6 +4,8 @@ menuText: "自定义组件模板"
 layout: Doc
 ---
 
+<!-- TODO: 更新 模板 template 说明 -->
+
 ## 操作场景
 
 Serverless Framework 提供了多个基础资源组件，用户可以通过不同组件的结合使用，快速完成云端资源的创建与部署，本教程将指导您如何使用已有组件，构建您自己的多组件 Serverless 应用模版。

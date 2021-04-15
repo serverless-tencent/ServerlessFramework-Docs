@@ -12,6 +12,7 @@ layout: Doc
 - [数据库集成](./database)
 - [静态资源集成](./static)
 - [开发模式](./dev-mode)
-- [开发模式](./dev-mode)
 - [腾讯云账号控制](./tencent-account)
 - [统计分析](./analytics)
+- [触发器配置](./trigger)
+- [多组件应用](./custom-components-dev)
