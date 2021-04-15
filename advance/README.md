@@ -8,3 +8,4 @@ layout: Doc
 - [层部署](./layer)
 - [灰度发布](./grayscale)
 - [自定义组件模板](./template)
+- [函数热启动](./hot-start)

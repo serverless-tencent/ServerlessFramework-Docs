@@ -20,7 +20,7 @@ Serverless Components CLI 支持以下功能命令：
 $ sls init express-starter
 
 # 初始 Express 组件应用并指定目录名称
-$ sls init express-starter -- name my-express-app
+$ sls init express-starter --name my-express-app
 ```
 
 #### 命令选项

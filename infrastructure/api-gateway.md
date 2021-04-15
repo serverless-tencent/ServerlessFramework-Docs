@@ -6,6 +6,9 @@ layout: Doc
 
 <!-- TODO: 更新网关使用说明和配置示例。 -->
 
+<!-- 目的用途：网关作用，路径，域名，protocal，ssl， -->
+<!-- https://github.com/serverless-components/tencent-apigateway/blob/master/docs/configure.md -->
+
 ## 操作场景
 
 API 网关组件是 serverless-tencent 组件库中的基础组件之一，您可以通过该组件快速且方便地创建、配置和管理腾讯云的 API 网关产品。

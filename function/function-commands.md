@@ -6,7 +6,8 @@ layout: Doc
 
 <!-- TODO: 更新函数命令。 -->
 
-<!--
+<!-- <!-- -->
+
 Serverless Function CLI 支持以下功能命令：
 
 ### Create 创建新的服务
@@ -221,4 +222,4 @@ $ serverless remove --stage dev --region ap-guangzhou
 
 - `--stage` or `-s` 要移除服务的环境名称。
 - `--region` or `-r` 要移除服务的环境的地区名称。
--->
+  -->
