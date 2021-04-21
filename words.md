@@ -28,4 +28,5 @@
 
 ## 翻译
 
-auto-scalling: 弹性扩容
+auto-scalling: 自动扩容
+dev-mode: 调试模式

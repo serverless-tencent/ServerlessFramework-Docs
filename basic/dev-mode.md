@@ -1,6 +1,6 @@
 ---
-title: "开发模式"
-menuText: "开发模式"
+title: "调试模式"
+menuText: "调试模式"
 layout: Doc
 ---
 

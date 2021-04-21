@@ -4,23 +4,20 @@ menuText: "组件应用开发"
 layout: Doc
 ---
 
-<!-- TODO: 更新组件开发教程  @Oliver -->
+Serverless Components 是 Serverless Framework 的一部分，通过定制的运行环境带来了更多的对传统框架应用的支持，让传统框架应用也可以获得 serverless 的优势，同时不需要花费时间来配置传统框架应用的运行时。
 
-## 操作场景
+> 本教程以开发一个 Express API 的案例说明如何通过 Serverless Components 来使用腾讯 SCF 和网关构建一个后端 API 应用，并获得 serverless 的自动扩容并按量付费能力。
 
-该任务指导您通过 Serverless Framework，在腾讯云上快速创建、配置和部署一个 Web 框架应用。
+## 初始化组件应用
 
-## 操作步骤
-
-### 快速部署
-
-在**空文件夹**目录下，执行如下指令：
+在**空目录**下，执行初始化命令：
 
 ```sh
-serverless
+# 交互式 serverless 初始化命令
+$ serverless
 ```
 
-接下来按照交互提示，完成项目初始化，应用请选择您希望部署的应用框架模版（此处以 Express 为例）：
+接下来按照交互提示，完成项目初始化，选择 `express-starter` 组件模版，并等待依赖安装结束：
 
 ```sh
 Serverless: 当前未检测到 Serverless 项目，是否希望新建一个项目？ Yes
@@ -34,17 +31,19 @@ Serverless: 请选择您希望创建的 Serverless 应用 express-starter
   laravel-starter - 快速部署一个 Laravel 基础应用
   nextjs-starter - 快速部署一个 nextjs 应用
 
-Serverless: 请输入项目名称 demo
+Serverless: 请输入项目名称 my-sls-express
 Serverless: 正在安装 express-starter 应用...
 
+- 项目 "my-sls-express" 已在当前目录成功创建
+- 执行 "cd my-sls-express && serverless deploy" 部署应用
 
-express-starter › Created
-
-
-demo 项目已成功创建！
+express-starter › 创建成功
 ```
 
-选择【立即部署】，将已经初始化好的项目快速部署腾讯云平台：
+应用创建完成之后，如果想要部署，可以选择【立即部署】并将已经初始化好的项目快速部署腾讯云平台：
+
+> 如果不想部署可以不立即部署到云端，并在稍后通过`serverless deploy`进行手动部署。  
+> 如果想要修改应用名称，或者进行其他调整请参考[YAML 配置](../basic/yaml)中的说明进行调整。
 
 ```sh
 Serverless: 是否希望立即将该项目部署到云端？ Yes
@@ -53,86 +52,161 @@ xxxxxxxx
 x  QR  x
 x CODE x
 xxxxxxxx
-请使用微信扫描上方二维码或者点击下方链接登录
-https://slslogin.qcloud.com/XKYUcbaK
-登录成功！
 
-serverless ⚡framework
-Action: "deploy" - Stage: "dev" - App: "demo1" - Instance: "expressDemo"
+请使用微信扫描上方二维码或者点击下方链接登录
+https://slslogin.qcloud.com/3N2f3dTv
+Login successful for TencentCloud.
+
+serverless ⚡ framework
+Action: "deploy" - Stage: "dev" - App: "my-sls-express-18525a69" - Instance: "express-starter"
 
 region: ap-guangzhou
-apigw:
-  serviceId:   service-xxxxx
-  subDomain:   service-xxxxx.gz.apigw.tencentcs.com
-  environment: release
-  url:         https://service-xxxxx.gz.apigw.tencentcs.com/release/
 scf:
-  functionName: express_component
+  functionName: express_component_bv2n5cc
   runtime:      Nodejs10.15
   namespace:    default
   lastVersion:  $LATEST
   traffic:      1
+apigw:
+  serviceId:   service-mt1d84ea
+  subDomain:   service-mt1d84ea-xxxxxxxxxx.gz.apigw.tencentcs.com
+  environment: release
+  url:         https://service-mt1d84ea-xxxxxxxxxx.gz.apigw.tencentcs.com/release/
 
-26s › expressDemo › Success
+应用控制台: https://console.cloud.tencent.com/ssr/detail?stageName=dev&appName=my-sls-express-xxxxxxxx&instanceName=express-starter&stageList=dev
+
+102s › express-starter › 部署成功
 ```
 
-部署完毕后，单击命令行输出的 API 网关链接，即可快速访问已部署好的 Web 框架应用：
+> 如果有使用全局密钥有可能会与上面流程不同，关于登陆的更多方式和说明请查看[腾讯云账号控制](../basic/tencent-account.md)相关内容获得更详细帮助。
 
-### 查看部署信息
+部署成功后会显示
+
+- 当前部署组件实例的环境(stage)，应用，地区，信息。
+- 已部署的云端组件(SCF 和 API 网关)的信息信息（运行时，命名空间，访问地址，环境信息）等。
+- (腾讯)应用控制台信息，在这里可以查看管理该组件应用。
+
+> 所有基础设施信息都默认自动生成，如果需要修改请到项目目录 serverless.yml 文件中进行修改 。
+
+部署成功后访问 API 网关地址就可以访问部署应用。
+
+<!-- TODO：添加网页截图 -->
+
+## 修改配置
+
+Serverless Framework 项目创建成功后会在目录生成 `serverless.yml`，这是 serverless 唯一的配置文件，所有配置都可以在这里进行快速修改。以下是自动生成的 serverless 配置文件
+
+```yml
+# ##应用信息##
+app: my-sls-express-18525a69 # app名称(app唯一识别标识)。同账号下需唯一，留空则继承组件实例名称
+component: express # [必选]要使用组件，更多组件请查看 https://github.com/serverless-components
+name: express-starter # [必选]组件实例名称
+
+# ##express 组件配置##
+# 更多配置请查看：https://github.com/serverless-components/tencent-express/blob/master/docs/configure.md
+inputs:
+  src: # 执行目录
+    src: ./
+    exclude:
+      - .env
+  region: ap-guangzhou # 部署目标地区。 更多参考 https://cloud.tencent.com/document/api/583/17238#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8
+  runtime: Nodejs10.15 # 运行环境。[Nodejs10.15, Nodejs12.16]
+  apigatewayConf: # API 网关
+    protocols:
+      - http
+      - https
+    environment: release # 发布环境。[test, prepub，release]
+```
+
+这里需要注意：
+
+> `app` 是应用名称，同时也作为云端应用的唯一标识。应用名称如果修改，会在云端重新部署为新的应用。  
+> `name` 是 component 组件实例的名称，一个应用可以包含多个组件。  
+> 每个账号下同一名称的应用只能存在一个，部署会按照应用名称创建/覆盖应用。同一应用下的组件在也会按照组件名创建/覆盖组件实例。  
+> `inputs` 是组件配置的参数，所有的组件配置都需要将配置信息写在 inputs 中。
+
+## 调试开发
+
+Serverless Framework 提供了快速灵活的调试模式来替代云平台的复杂费时的调试方式。使用 `serverless dev` 就可以快速开启调试模式。
+
+```sh
+# 进入 serverless 调试模式
+$ serverless dev
+
+serverless ⚡ framework
+Dev Mode - 项目监控中，任何变更都会通过日志输出
+
+远程调试链接：ws://127.0.0.1:9222
+更多信息请参考：https://nodejs.org/en/docs/inspector
+请打开 Chrome 浏览器，地址栏访问 chrome://inspect, 点击 [Open dedicated DevTools for Node] 开始调试代码
+--------------------- 实时日志 ---------------------
+6:35:52 PM - express-starter - deployment
+region: ap-guangzhou
+scf:
+  functionName: express_component_bv2n5cc
+  runtime:      Nodejs10.15
+  namespace:    default
+  lastVersion:  $LATEST
+  traffic:      1
+apigw:
+  serviceId:   service-mt1d84ea
+  subDomain:   service-mt1d84ea-xxxxxxxxxx.gz.apigw.tencentcs.com
+  environment: release
+  url:         https://service-mt1d84ea-xxxxxxxxxx.gz.apigw.tencentcs.com/release/
+
+express-starter › 监听中 ...
+```
+
+加下来修改代码保存后都会立即部署到腾讯云上，并可以立即开始测试。更多关于调试模式的使用方法请参考[调试模式](../basic/dev-mode.md)
+
+> 调试模式不建议频繁保存代码，每次代码保存都会触发部署，过于频繁保存可能导致调试模式出现异常。
+
+## 部署更新代码
+
+在代码调试满意之后，通过一下命令部署代码到腾讯云。
+
+```sh
+# 进入 serverless 调试模式
+$ serverless deploy
+```
+
+<!-- ## 使用 API  TODO: 添加Invoke 说明-->
+
+## 查看部署信息
 
 如果希望再次查看应用的部署状态和资源，可以进入到部署成功的文件夹，运行如下命令，查看对应信息：
 
-```
-cd demo #进入项目目录，此处请改为您的项目目录名称
-sls info
-```
+```sh
+# 查看已部署应用信息
+$ serverless info
 
-> ?sls 是 serverless 命令的简写。
+serverless ⚡framework
 
-### 查看目录结构
 
-在初始化的项目目录下，可以看到一个 Express 项目的最基本结构：
+最后操作:  deploy (a few seconds ago)
+部署次数:  6
+应用状态:  active
 
-```
-.
-├── serverless.yml  # 配置文件
-├—— index.js    # 入口函数
-├—— package.json # 项目依赖
-└── .env # 环境变量文件
-```
+region: ap-guangzhou
+scf:
+  functionName: express_component_bv2n5cc
+  runtime:      Nodejs10.15
+  namespace:    default
+  lastVersion:  $LATEST
+  traffic:      1
+apigw:
+  serviceId:   service-mt1d84ea
+  subDomain:   service-mt1d84ea-xxxxxxxxxx.gz.apigw.tencentcs.com
+  environment: release
+  url:         https://service-mt1d84ea-xxxxxxxxxx.gz.apigw.tencentcs.com/release/
 
-- serverless.yml 配置文件实现了函数基本信息的快速配置，函数控制台支持的配置项都支持在 yml 文件里配置（查看 [云函数的全量配置信息](https://github.com/serverless-components/tencent-scf/blob/master/docs/configure.md)）。
-- index.js 为项目的入口函数，此处为 helloworld 模版。
-- package 为项目依赖文件，记录了该 Node.js 框架项目需要安装的依赖包。
-- .env 文件里存放了用户登录的鉴权信息，您也可以在里面配置其它环境变量。
+应用控制台: https://console.cloud.tencent.com/ssr/detail?stageName=dev&appName=my-sls-express-xxxxxxxx&instanceName=express-starter&stageList=dev
 
-### 重新部署
-
-在本地项目目录下，您可以对函数模版项目内容与配置文件进行修改，重新安装依赖后，通过以下指令进行重新部署：
-
-```
-npm install && sls deploy
+express-starter › 信息成功加载
 ```
 
-> ?如需查看移除过程中的详细信息，可以在 `sls deploy` 后增加 `--debug` 参数进行查看。
+**下一步：进一步使用组件**
 
-### 持续开发
-
-部署完成后，登录 [Serverless 应用控制台](https://console.cloud.tencent.com/ssr)，查看项目部署后输出的基本信息、项目请求次数、项目报错统计等多项监控指标
-查看项目部署后输出的基本信息、项目请求次数、项目报错统计等多项监控指标，并实现项目持续开发与部署。
-
-详情请参考 [控制台开发文档](https://github.com/AprilJC/Serverless-Framework-Docs/blob/main/docs/%E6%A1%86%E6%9E%B6%E8%BF%81%E7%A7%BB/%E6%8E%A7%E5%88%B6%E5%8F%B0%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97.md)。
-Serverless Framework 支持通过不同指令，帮助您完成项目的持续开发部署、灰度发布等能力，您也可以结合**层**、**自定义域名**等其它高级能力一起使用，实现应用的高级能力配置。
-
-## 常见问题
-
-- 问题 1：输入 `serverless` 时没有默认弹出中文引导。
-  解决方案： 在 .env 文件中增加配置 SERVERLESS_PLATFORM_VENDOR=tencent 即可。
-- 问题 2：在境外网络环境，输入 `sls deploy` 后部署十分缓慢。
-  解决方案：在 .env 文件中增加配置 `GLOBAL_ACCELERATOR_NA=true` 则开启境外加速 。
-- 问题 3：输入 `sls deploy` 后部署报网络错误。
-  解决方案：在 .env 文件中增加以下代理配置。
-  ```
-  HTTP_PROXY=http://127.0.0.1:12345 #请将'12345'替换为您的代理端口
-  HTTPS_PROXY=http://127.0.0.1:12345 #请将'12345'替换为您的代理端口
-  ```
+- [了解组件前端开发](../components/frontend)
+- [了解组件后端开发](../components/backend)
+- [了解组件全栈开发](../components/fullstack)

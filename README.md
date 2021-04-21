@@ -30,37 +30,41 @@ Serveless 为使用传统框架(如：Nextjs, Express, Django 等)开发的应�
 
 Serverless 为使用 SaaS 应用(如：Wordpress 等)提供了方便的运行环境支持，通过 serverless 简单配置就可以部署并开始使用 SaaS 应用，也无需担心应用的后续维护和升级。
 
-<!-- TODO: 更新产品优势 @Oliver
 ## 独特优势
 
-### （开发流程）事件机制
-  * 。。。
-  * 。。。
-Serverless Framework 打造了从初始化、编码、调试、资源配置和部署发布，到业务监控告警、故障排查的一站式解决方案 (一个产品覆盖开发过程各个方面，避免切换)
+### 多语言，传统框架支持、远程调试
 
-* 通过yml完成全部配置，使用简单。
-Serverless Framework 提供了丰富的软件应用生态（Component）供您搭建各种形态的 Serverless 应用。您只需几行配置描述，即可进行云函数、API 网关、COS、DB 等 Serverless 资源的快速创建、部署和修改，无需在各个云资源控制台手动开通服务和配置管理，彻底摆脱基础设施的管理和维护，轻松交付 Serverless 应用。
+- Serverless Framework 支持众多编程语言，包含：Node.js, Python, PHP, Java, Go 等。通过 Serverless Tencent 用户可以快速进行函数开发，无需关心各个云平台的不同用法和配置操作。
 
+- Serverless Framework 支持使用传统开发框架进行开发，包括：Express, Koa, Egg.js, next.js, nuxt.js, react.js, vue.js, Flask, Laravel 等。通过 Serverless Components 可以在不替换现有应用框架的情况下获得 serverless 的众多优势。
 
-### （运维）弹性伸缩 0运维 高可用
-  * 。。。
-  * 。。。
-Serverless Framework 支持用户快速部署 Serverless 化的云服务，支持用户按需付费，并能够根据业务请求自动进行弹性伸缩，让您可以从容面对业务请求峰值。您无需再提前手动配置计算资源，无需从零搭建自己的监控告警系统，完全免去传统的运维烦恼，并使得您付出的资源成本相比传统服务可节省超过 80% 。
+- Serverless Framework 支持远程在线调试，开发者无需在本地启动任何服务即可开始调试代码。
 
-大多数 Serverless Components 比传统的配置工具部署快 20 倍左右，Components 可以通过快速的部署和远端验证，有效减少本地模拟和调试的环节。
+### 灵活配置、一键部署、日志报警
 
-### （成本）按量付费 监控警告
-  * 。。。
+- Serverless Framework 通过一个 serverless.yml 几行配置即可完成所有基础设施（云函数、API 网关、COS、DB 等）的创建，部署，和修改。
 
--->
+- Serverless Framework 通过一个命令或者控制台一个按键即可完成在不同环境(stage)和资源地区(region)的应用部署工作。同时相比传统部署方式，通过 Serverless Framework 进行部署速度可以提升 20 倍。
 
-## 概念区分
+- Serverless Framework 与腾讯云深度合作，为用户提供了更强大的日志收集，统计分析，异常报警服务。开发者无需任何配置即可直接使用。
+
+### 高可用、低成本、弹性扩容
+
+- Serverless Framework 通过与腾讯云深度合作，以及 SCF 的灰度功能为广大开发者提供了一个简单有效的应用托管平台，通过 Serverless Framework 部署的应用可靠性可以达到 99.5% 的可靠性，同时在出现代码问题时，可以快速切换至指定版本。
+
+- Serverless Framework 通过按量计费，尽在用户的代码触发后运行时才会计费，在闲置时间不收取任何费用，相比传统虚拟机的包月/包年服务可以做多为用户用户节省 90%的使用成本。
+
+- Serverless Framework 能够根据业务请求自动进行弹性伸缩，在服务达到峰值时会自动扩容，添加更多服务资源来为用户的应用提供支持，并在高峰过去之后，恢复收缩到扩容之前的状态。进一步保证了应用的可用性并降低了使用成本。
+
+## 概念 & 术语
 
 ### Serverless Framework
 
-### Serverless Traditional
+Serverless Framework 是基于下一代公有云服务提供的弹性扩容，并按量付费的无服务器计算解决方案，从而大大降低构建和维护应用的开销，供开发者专注业务逻辑开发。
 
-Serverless Traditional 是独立于云平台的函数应用开发框架，同时支持事件触发，弹性扩容，并且按需付费。从而大大降低构建和维护应用的开销，供开发者专注业务逻辑。
+### Serverless Tencent
+
+Serverless Tencent 是 Serverless 的腾讯云版本，主要为广大中国开发者提供函数服务开发能力。 同时支持事件触发，弹性扩容，并且按量付费。相比于 serverless, serverless-tencent 使用更简洁，高效，同时也内置了众多 serverless plugin 功能支持。
 
 详细介绍可以参考 [Github 上的 Serverless 项目](https://github.com/serverless/serverless/blob/master/README_CN.md)。
 

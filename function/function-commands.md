@@ -8,7 +8,7 @@ layout: Doc
 
 <!-- <!-- -->
 
-Serverless Function CLI 支持以下功能命令：
+Serverless Tencent CLI 支持以下功能命令：
 
 ### Create 创建新的服务
 
