@@ -63,11 +63,10 @@ serverless remove
 
 执行 `serverless deploy` 时，根据 serverless.yml 文件中的配置对云函数资源进行创建或更新。一份简单的 serverlesss.yml 文件如下：
 
-> **说明**：配置详情请参考 [全量配置文档](https://github.com/serverless-components/tencent-scf/blob/master/docs/configure.md)。
+> **说明**：配置详情请参考 [全量配置文档](../basic/yaml.md)。
 
 ```
 #scf组件配置样例
-#全量配置参考https://github.com/serverless-components/tencent-scf/blob/master/docs/configure.md
 
 #组件信息
 component: scf # (必填) 引用 component 的名称，当前用到的是 tencent-scf 组件

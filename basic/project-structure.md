@@ -53,3 +53,5 @@ Serverless Framework 不仅支持单函数的部署，对于多函数的项目�
 │   └── serverless.yml # 数据库配置文件
 └── .env # 环境变量文件
 ```
+
+> 注意：当前只支持识别 `serverless.yml` 配置文件名称，并且一个 yml 只支持创建一个 serverless 实例。

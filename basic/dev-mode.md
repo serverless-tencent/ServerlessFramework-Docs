@@ -21,7 +21,7 @@ layout: Doc
 ```
 $ sls dev
 serverless ⚡ framework
-Dev Mode - Watching your Component for changes and enabling streaming logs, if supported...
+dev 模式开启中...
 
 Debugging listening on ws://127.0.0.1:9222.
 For help see https://nodejs.org/en/docs/inspector.
@@ -39,7 +39,7 @@ scf:
   runtime:      Nodejs10.15
   namespace:    default
 
-express-api-demo › Watching
+express-api-demo ›  监听中 ...
 ```
 
 在进入 dev 模式后，Serverless 工具将输出部署的内容，并启动持续文件监控；在代码文件有修改的情况下，将自动再次进行部署，将本地文件更新到云端。
@@ -72,7 +72,7 @@ scf:
 在开发模式下，通过 Ctrl+C 可以退出开发模式（dev 模式）。
 
 ```
-express-api-demo › Disabling Dev Mode & Closing ...
+express-api-demo › Dev 模式关闭中 ...
 
 express-api-demo › Dev Mode Closed
 ```
