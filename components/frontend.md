@@ -6,11 +6,11 @@ layout: Doc
 
 Serverless Framework 提供了许多流行前端组件来帮助前端使用 serverless 进行前端开发。目前提供的官方组件有
 
-- 静态网站(static-website): 静态 HTML 网站项目
-- React 站点(react-starter): React + Parcel 网站开发的模板
-- Vue 站点(vue-starter): @vue/cli 初始化的开发模板
-- Next.js 站点(nextjs-starter): Next.js 开发模板
-- Nuxt.js 站点(nuxtjs-starter): Nuxt.js 开发模板
+- 静态网站([static-website](https://github.com/serverless-components/tencent-examples/tree/master/website-starter)): 静态 HTML 网站项目
+- React 站点([react-starter](https://github.com/serverless-components/tencent-examples/tree/master/react-starter)): React + Parcel 静态页面模板
+- Vue 站点([vue-starter](https://github.com/serverless-components/tencent-examples/tree/master/vue-starter)): @vue/cli 初始化的静态页面模板
+- Next.js 站点([nextjs-starter](https://github.com/serverless-components/tencent-examples/tree/master/nextjs-starter)): Next.js 开发模板
+- Nuxt.js 站点([nuxtjs-starter](https://github.com/serverless-components/tencent-examples/tree/master/nuxtjs-starter)): Nuxt.js 开发模板
 
 使用 Serverless Framework 组件，大开发者得以在国内快速部署网站应用，并通过腾讯云的深度优化，让网站访问速度达到最优。
 
@@ -124,6 +124,9 @@ module.exports = createServer;
 
 在网站开发中，往往需要存储非常多的静态资源，如，图片，视频，第三方的 js, css 文件等。通过使用 Serverless Framework 的 COS 组件可以快速管理维护这些资源。
 
+<!-- next.js nuxt.js -->
+<!-- vue, react -> website -->
+
 要使用 COS 组件来管理网站静态资源在目录的 `serverless.yml` 文件的`inputs` 内添加`staticConf` 的 `cosConf` 配置， 更多配置请查看 [COS 对象存储](../infrastructure/cos) 中的说明和更多配置信息。
 
 ```yml
@@ -133,15 +136,18 @@ name: my-nextjs-site # cos组件实例名称
 
 inputs:
   # ...省略此处配置
-  staticConf: # 静态资源相关配置
-    cosConf:
-      src: ./assets # 要上传或目录
-      targetDir: / # 上传到存储桶的目标目录,默认为 /
-      bucket: serverless-bucket # 存储桶名称
-      region: ap-guangzhou # 存储桶所在地区
-      protocol: https
-      acl:
-        permissions: public-read # 访问权限
+  # staticConf: # 静态资源相关配置
+
+  # cosConf:
+  src: ./assets # 要上传或目录
+  targetDir: / # 上传到存储桶的目标目录,默认为 /
+  bucket: serverless-bucket # 存储桶名称
+  region: ap-guangzhou # 存储桶所在地区
+  protocol: https
+  acl:
+    permissions: public-read # 访问权限
+  host: ...
+  cdnConf:
 ```
 
 静态资源配置成功后，可以通过 `<protocol>://<bucket-name>-<appid>.cos.<region>.myqcloud.com` 进行访问，在如上配置中的最终访问地址为 `https://serverless-bucket-1251556596.cos.ap-guangzhou.myqcloud.com`

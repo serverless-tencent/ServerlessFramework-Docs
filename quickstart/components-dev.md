@@ -205,8 +205,4 @@ apigw:
 express-starter › 信息成功加载
 ```
 
-**下一步：进一步使用组件**
-
-- [了解组件前端开发](../components/frontend)
-- [了解组件后端开发](../components/backend)
-- [了解组件全栈开发](../components/fullstack)
+**下一步：[使用组件进行开发](../components/README)**

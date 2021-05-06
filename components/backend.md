@@ -6,11 +6,12 @@ layout: Doc
 
 Serverless Framework 提供了许多流行前端组件来帮助前端使用 serverless 进行前端开发。目前提供的官方组件有
 
-- Express 应用(express-starter): Express 框架模板(Node.js)
-- Koa 应用(koa-starter): Koa 框架模板(Node.js)
-- Egg.js 应用(eggjs-starter): Eggjs 框架模板(Node.js)
-- Flask 应用(flask-starter): Flask 框架模板(Python)
-- Laravel 应用(laravel-starter): Laravle 框架模板(PHP)
+- Express 应用([express-starter](https://github.com/serverless-components/tencent-examples/tree/master/express-starter)): Express 框架模板(Node.js)
+- Koa 应用([koa-starter](https://github.com/serverless-components/tencent-examples/tree/master/koa-starter)): Koa 框架模板(Node.js)
+- Egg.js 应用([eggjs-starter](https://github.com/serverless-components/tencent-examples/tree/master/eggjs-starter)): Eggjs 框架模板(Node.js)
+- Restful API 应用([restful-api](https://github.com/serverless-components/tencent-examples/tree/master/restful-api)): Python + API gateway 模板。
+- Flask 应用([flask-starter](https://github.com/serverless-components/tencent-examples/tree/master/flask-starter)): Flask 框架模板(Python)
+- Laravel 应用([laravel-starter](https://github.com/serverless-components/tencent-examples/tree/master/laravel-starter)): Laravle 框架模板(PHP)
 
 ## 后端应用
 

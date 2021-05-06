@@ -10,10 +10,12 @@
 
 - Serverless Framework
 
-  - Serverless function/ plguin / core / traditioinal ?
+  - Serverless
 
     - service: 函数服务
     - service instance: 函数实例
+
+  - Serverless Tencent
 
   - Serverless Components
 

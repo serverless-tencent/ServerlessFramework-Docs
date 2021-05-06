@@ -6,6 +6,8 @@ layout: Doc
 
 <!-- TODO: 更新 组件命令 说明 -->
 
+> 组件命令需要在函数组件目录下执行
+
 Serverless Components CLI 支持以下功能命令：
 
 - 需要在 Serverless Components 项目目录中执行

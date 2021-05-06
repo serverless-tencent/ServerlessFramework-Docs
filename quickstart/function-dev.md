@@ -8,7 +8,7 @@ layout: Doc
 
 通过 Serverless CLI 的交互命令可以快速创建一个 Serverless 项目，函数项目请选择 `scf-starter`。
 
-> 与国际版本不同，Serverless 中国通过 SCF 组件实现了国际版的函数开发功能。同时用户可以使方便的整合更多的腾讯云基础设施。详细说明请查看[函数开发说明文档](../function/README.md)。
+> 与国际版本不同，Serverless 中国通过 SCF 组件实现了国际版的函数开发功能。同时用户可以使方便的整合更多的腾讯云基础设施。详细说明请查看[函数开发(function)指南](../function/README.md)。
 
 ## 操作步骤
 
@@ -82,25 +82,14 @@ triggers:
 27s › scfdemo › Success
 ```
 
-部署完毕后，通过以下指令，完成函数的远程调用：
+或者指定函数模板来快速初始化项目
 
 ```sh
-# 远程函数调用
-$ sls invoke --inputs function=helloworld
+# 初始化 nodejs 函数模板，并指定目录名称为 my-scf-node-app
+$ sls sls init scf-nodejs --name my-scf-node-app
 ```
 
-> ?sls 是 serverless 命令的简写。
-
-### 查看部署信息
-
-如果希望再次查看应用的部署状态和资源，可以进入到部署成功的文件夹，运行如下命令，查看对应信息：
-
-```sh
-#进入项目目录，此处请改为您的项目目录名称
-$ cd demo
-
-$ sls info
-```
+> 更多函数应用开发介绍及模板信息请查看[函数应用说明](../function/README)
 
 ### 查看目录结构
 
@@ -128,6 +117,17 @@ $ sls deploy
 
 > ?如需查看移除过程中的详细信息，可以增加 `--debug` 参数进行查看。
 
+### 查看部署信息
+
+如果希望再次查看应用的部署状态和资源，可以进入到部署成功的文件夹，运行如下命令，查看对应信息：
+
+```sh
+#进入项目目录，此处请改为您的项目目录名称
+$ cd demo
+
+$ sls info
+```
+
 ### 持续开发
 
 部署完成后，Serverless Framework 支持通过不同指令，帮助您完成项目的持续开发部署、灰度发布等能力，您也可以结合其它组件一起使用，完成多组件应用的部署管理。
@@ -146,3 +146,4 @@ $ sls deploy
   HTTP_PROXY=http://127.0.0.1:12345 #请将'12345'替换为您的代理端口
   HTTPS_PROXY=http://127.0.0.1:12345 #请将'12345'替换为您的代理端口
   ```
+  **下一步：[进行函数开发](../functions/README)**
