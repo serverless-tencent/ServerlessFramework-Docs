@@ -8,6 +8,8 @@ layout: Doc
 
 ## 操作场景
 
+如果您的云函数（SCF）拥有较多的依赖库或公共代码文件，您可以使用 SCF 中的层进行管理。使用层管理，您可以将依赖放在层中而不是部署包中，可确保部署包保持较小的体积
+
 Layer 组件是 serverless-tencent 组件库中的基础组件之一。 您可以通过该组件快速且方便地创建、配置和管理腾讯云函数的层资源。
 
 ## 前提条件
@@ -56,7 +58,7 @@ inputs:
     - Nodejs10.15
 ```
 
-[查看详细配置文档 >>](https://github.com/serverless-components/tencent-layer/blob/master/docs/configure.md)
+[查看详细配置文档 >>](#1)
 
 ### 部署
 
@@ -66,8 +68,6 @@ inputs:
 sls deploy
 ```
 
-> ?微信扫码授权部署有过期时间，如果想要持久授权，请参考 [账号配置](#account)。
-
 ### 移除
 
 执行以下命令移除部署的服务：
@@ -76,25 +76,58 @@ sls deploy
 sls remove
 ```
 
-<span id="account"></span>
+<span id="1"></span>
+##  全量配置
+- [全量 yml](#1-1)
+- [配置描述](#1-2)
 
-### 账号配置（可选）
+<span id="1-1"></span>
+```yml
+# serverless.yml
 
-当前默认支持 CLI 扫描二维码登录，如您希望配置持久的环境变量/密钥信息，也可以本地创建 `.env` 文件：
+component: layer
+name: layerDemo
+org: orgDemo
+app: appDemo
+stage: dev
 
-```console
-touch .env # 腾讯云的配置信息
+inputs:
+  name: test
+  region: ap-guangzhou
+  src: ./node_modules
+  # src:
+  #   src: ./node_modules
+  #   targetDir: /node_modules
+  #   exclude:   # 被排除的文件或目录
+  #     - .env
+  #     - node_modules
+  # src:
+  #   bucket: layers
+  #   object: sls-layer-test-1584524206.zip
+  #   exclude:   # 被排除的文件或目录
+  #     - .env
+  #     - node_modules
+  runtimes:
+    - Nodejs10.14
+  description: test project layer
 ```
 
-在 `.env` 文件中配置腾讯云的 SecretId 和 SecretKey 信息并保存。
+<span id="1-2"></span>
+### 配置描述
 
-```
-# .env
-TENCENT_SECRET_ID=123
-TENCENT_SECRET_KEY=123
-```
+| 参数名称    | 是否必填 | 参数类型 | 默认值 | 描述                                                           |
+| ----------- | :------: | :------: | :----: | -------------------------------------------------------------- |
+| region      |    是    |  String  |        | 地区                                                           |
+| name        |    是    |  String  |        | 层名称                                                         |
+| src         |    是    |  String  |        | 默认为当前目录, 如果是对象, 配置参数参考 [执行目录](#执行目录) |
+| runtimes    |    是    | String[] |        | 层支持的运行环境                                               |
+| description |    否    |  String  |        | 描述                                                           |
 
-> ?
->
-> - 如果没有腾讯云账号，请先 [注册新账号](https://cloud.tencent.com/register)。
-> - 如果已有腾讯云账号，可以在 [API 密钥管理](https://console.cloud.tencent.com/cam/capi) 中获取 SecretId 和 SecretKey。
+## 执行目录
+
+| 参数名称 | 是否必填 |    参数类型     | 默认值 | 描述                                                                                                                                                                                 |
+| -------- | :------: | :-------------: | :----: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| src      |    否    |     String      |        | 代码路径。与 object 不能同时存在。                                                                                                                                                   |
+| exclude  |    否    | Array of String |        | 不包含的文件或路径, 遵守 [glob 语法](https://github.com/isaacs/node-glob)                                                                                                            |
+| bucket   |    否    |     String      |        | bucket 名称。如果配置了 src，表示部署 src 的代码并压缩成 zip 后上传到 bucket-appid 对应的存储桶中；如果配置了 object，表示获取 bucket-appid 对应存储桶中 object 对应的代码进行部署。 |
+| object   |    否    |     String      |        | 部署的代码在存储桶中的路径。                                                                                                                                                         |

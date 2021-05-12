@@ -86,7 +86,7 @@ inputs:
 
 PostgreSQL 组件支持 0 配置部署，您可以直接通过配置文件中的默认值进行部署。您依然可以修改更多可选配置来进一步开发该项目。
 
-[查看详细配置文档 >>](https://github.com/serverless-components/tencent-postgresql/blob/master/docs/configure.md)
+[查看详细配置文档 >>](#1)
 
 > !当前 PGSQL for Serverless 仅支持**北京三区**，**广州二区**，**上海二区**三个地域的创建和部署，因此在填写 yaml 中的地域可用区时需要注意填写为正确的地域和对应的 VPC 子网信息。
 
@@ -110,10 +110,43 @@ $ sls deploy
 $ sls remove
 ```
 
-## 最佳实践
+<span id="1"></span>
+##  全量配置
+- [全量 yml](#1-1)
+- [主要参数说明](#1-2)
 
-部署 PG Serverless DB 之后，您可以参考 [部署支持数据库操作的全栈网站](https://cloud.tencent.com/document/product/1154/43009) 使用该 DB 实例。
+<span id="1-1"></span>
+```yml
+# serverless.yml
+component: postgresql # (必填) 组件名称，此处为 postgresql
+name: serverlessDB # (必填) 实例名称
+org: test # (可选) 用于记录组织信息，默认值为您的腾讯云账户 appid
+app: serverlessDB # (可选) 该应用名称
+stage: dev # (可选) 用于区分环境信息，默认值为 dev
 
-## 更多组件
+inputs:
+  region: ap-guangzhou # 可选 ap-guangzhou, ap-shanghai, ap-beijing
+  zone: ap-guangzhou-2 # 可选 ap-guangzhou-2, ap-shanghai-2, ap-beijing-3
+  dBInstanceName: serverlessDB
+  projectId: 0
+  dBVersion: 10.4
+  dBCharset: UTF8
+  vpcConfig:
+    vpcId: vpc-123
+    subnetId: subnet-123
+  extranetAccess: false
+```
+<span id="1-1"></span>
+### 主要参数说明
 
-您可以在 [Serverless Components](https://github.com/serverless/components) repo 中查询更多组件的信息。
+| 参数               | 必填/可选 | 类型    | 默认值  | 描述                               |
+| ------------------ | --------- | ------- | ------- | ---------------------------------- |
+| region             | 必填      | String  |         | 数据库的所属地区                   |
+| zone               | 必填      | String  |         | 数据库所在地区的区域               |
+| dBInstanceName     | 必填      | String  |         | 数据库实例名称，对一用户必须唯一   |
+| dBVersion          | 可选      | string  | `10.4`  | PostgreSQL 版本号，目前支持: 10.4  |
+| dBCharset          | 可选      | String  | `UTF8`  | 数据库的字符集编码                 |
+| projectId          | 可选      | Integer | `0`     | 项目的 ID                          |
+| vpcConfig.vpcId    | 必填      | String  |         | VPC 的 ID                          |
+| vpcConfig.subnetId | 可选      | String  |         | Subnet 的 ID                       |
+| extranetAccess     | 可选      | Boolean | `false` | 是否开启 serverlessDB 实例外网访问 |

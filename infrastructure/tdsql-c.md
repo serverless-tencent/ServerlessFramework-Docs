@@ -8,7 +8,9 @@ layout: Doc
 
 ## 操作场景
 
-该教程指导您通过 Serverless Framework 组件，快速创建一个 TDSQL-C Serverless 数据库实例。
+云原生数据库 TDSQL-C（Cloud Native Database TDSQL-C，TDSQL-C）是腾讯云自研的新一代高性能高可用的企业级分布式云数据库。融合了传统数据库、云计算与新硬件技术的优势，保障数据安全可靠。
+
+该教程指导您通过 Serverless Framework 组件，快速创建一个 TDSQL-C Serverless MySQL 数据库实例。
 
 ## 操作步骤
 
@@ -36,7 +38,7 @@ $ mkdir tencent-tdsqlc && cd tencent-tdsqlc
 $ touch serverless.yml
 ```
 
-在 `serverless.yml` 文件中进行如下配置（[查看全量配置](https://github.com/serverless-components/tencent-cynosdb/tree/master/docs/configure.md)）：
+在 `serverless.yml` 文件中进行如下配置（[查看全量配置](#1)）：
 
 ```yml
 # serverless.yml
@@ -62,8 +64,6 @@ inputs:
 ```bash
 $ sls deploy
 ```
-
-> ?`sls` 命令是 `serverless` 命令的缩写。
 >
 > 部署完成后，可以在命令行看到创建的数据库实例信息：
 > <img src="https://main.qcloudimg.com/raw/66e70fa9bf9147ff55790db19767dc78.png" width="70%">
@@ -113,23 +113,60 @@ $ sls resetpwd --inputs adminPassword=123456@abc
 $ sls info
 ```
 
-### 账号配置（可选）
+<span id="1"></span>
+##  全量配置
+- [全量 yml](#1-1)
+- [主要参数说明](#1-2)
 
-当前默认支持 CLI 扫描二维码登录，如您希望配置持久的环境变量/密钥信息，也可以本地创建 `.env` 文件：
+<span id="1-1"></span>
 
-```bash
-$ touch .env # 腾讯云的配置信息
+```yml
+app: appDemo # (可选) 该应用名称，字符串
+stage: dev # (可选) 用于区分环境信息，默认值为 dev，字符串
+component: cynosdb # (必填) 组件名称，此处为 cynosdb
+name: cynosdbDemo # (必填) 实例名称
+
+inputs:
+  region: ap-shanghai # 可选 ap-guangzhou, ap-shanghai, ap-nanjing
+  zone: ap-shanghai-2 # 可选 ap-guangzhou-4, ap-shanghai-2, ap-beijing-3, ap-nanjing-1
+  enablePublicAccess: false
+  vpcConfig:
+    vpcId: vpc-123
+    subnetId: subnet-123
+  # 如果只创建 serverless 版本，一下两个参数可忽略
+  dbMode: SERVERLESS
+  payMode: 0
 ```
 
-在 `.env` 文件中配置腾讯云的 SecretId 和 SecretKey 信息并保存：
+<span id="1-2"></span>
+
+### 主要参数说明
+
+| 参数               | 必选   | 类型    | 默认值       | 描述                 |
+| ------------------ | ------ | ------- | ------------ | -------------------- |
+| region             | 是     | string  |              | 数据库的所属地区     |
+| zone               | 是     | string  |              | 数据库所在地区的区域 |
+| vpcConfig.vpcId    | 是     | string  |              | VPC 的 ID            |
+| vpcConfig.subnetId | 是     | string  |              | Subnet 的 ID         |
+| enablePublicAccess | 否     | boolean | `false`      | 是否开启外网访问     |
+| dbMode             | 否     | string  | `SERVERLESS` | 数据库类型           |
+| payMode            | number | number  | `0`          | 付费类型             |
+
+> Serverless Cynosdb 当前支持可用区为：`ap-guangzhou-4`, `ap-shanghai-2`, `ap-beijing-3`, `ap-nanjing-1`
+
+### dbMode 说明
 
 ```
-# .env
-TENCENT_SECRET_ID=123
-TENCENT_SECRET_KEY=123
+SERVERLESS - serverless 版本
+NORMAL     - 正常版本
 ```
 
-> ?
->
-> - 如果没有腾讯云账号，可以在此 [注册新账号](https://cloud.tencent.com/register)。
-> - 如果已有腾讯云账号，可以在 [API 密钥管理](https://console.cloud.tencent.com/cam/capi) 中获取 SecretId 和 SecretKey。
+### payMode 说明
+
+只有在 `dbMode` 配置为 `NORMAL` 时，才生效
+
+```
+0         - 按量计费
+1         - 包年包月，目前只支持购买一个月
+```
+
