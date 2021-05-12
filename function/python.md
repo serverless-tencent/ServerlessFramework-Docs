@@ -55,62 +55,8 @@ def main_handler(event, context):
 
 ### 使用内建库
 
-目前包含的库如下:
-| 库名称 | Python 3 版本 | Python 2 版本 |
-| :--- | :----: | :---: |
-| absl-py | 0.2.2 | 0.2.2 |
-| asn1crypto | 0.24.0 | 0.24.0 |
-| astor | 0.7.1 | 0.7.1 |
-| backports.ssl-match-hostname | - | 3.4.0.2 |
-| backports.weakref | - | 1.0.post1 |
-| bleach | 1.5.0 | 1.5.0 |
-| cassdk | - | 1.0.2 |
-| certifi | 2019.3.9 | 2017.11.5 |
-| cffi | 1.12.2 | 1.12.2 |
-| chardet | 3.0.4 | 3.0.4 |
-| cos-python-sdk-v5 | 1.6.6 | 1.6.6 |
-| cryptography | 2.6.1 | 2.6.1 |
-| dicttoxml | 1.7.4 | 1.7.4 |
-| enum34 | - | 1.1.6 |
-| funcsigs | - | 1.0.2 |
-| futures | - | 3.2.0 |
-| gast | 0.2.0 | 0.2.0 |
-| grpcio | 1.13.0 | 1.13.0 |
-| html5lib | 0.9999999 | 0.9999999 |
-| idna | 2.8 | 2.6 |
-| iniparse | 0.4 | 0.4 |
-| iniparse | - | 1.0.22 |
-| Markdown | - | 2.6.11 |
-| mock | - | 2.0.0 |
-| mysqlclient | 1.3.13 | 1.3.13 |
-| nose | - | 1.3.7 |
-| numpy | 1.15.0 | 1.14.5 |
-| ordereddict | - | 1.1 |
-| pbr | - | 4.1.0 |
-| Pillow | 6.0.0 | 6.0.0 |
-| pip | 9.0.1 | 18 |
-| protobuf | 3.6.0 | 3.6.0 |
-| psycopg2-binary | 2.8.2 | 2.8.2 |
-| pyaml | - | 2019.4.1 |
-| pycparser | 2.19 | 2.19 |
-| pycurl | 7.43.0 | 7.43.0.1 |
-| pygpgme | - | 0.3 |
-| PyMySQL | 0.9.3 | 0.9.3 |
-| pytz | 2019.1 | 2019.1 |
-| PyYAML | - | 5.1 |
-| qcloud-image | 1.0.0 | 1.0.0 |
-| qcloudsms-py | 0.1.3 | 0.1.3 |
-| requests | 2.21.0 | 2.18.4 |
-| serverless-db-sdk | 0.0.1 | 0.0.1 |
-| setuptools | 28.8.0 | 39.1.0 |
-| six | 1.12.0 | 1.11.0 |
-| tencentcloud-sdk-python | 3.0.65 | 3.0.65 |
-| tencentserverless | 0.1.4 | 0.1.4 |
-| tensorboard | 1.9.0 | 1.9.0 |
-| tensorflow | 1.9.0 | 1.9.0 |
-| tensorflow-serving-api | 1.9.0 | 1.9.0 |
-| termcolor | 1.1.0 | 1.1.0 |
-| urlgrabber | - | 3.10.2 |
-| urllib3 | 1.24.2 | 1.22 |
-| Werkzeug | 0.14.1 | 0.14.1 |
-| wheel | 0.31.1 | 0.31.1 |
+<!-- 内建库腾讯云 -->
+
+目前包含的库请参考[腾讯云说明文档](https://cloud.tencent.com/document/product/583/55592#.E5.86.85.E7.BD.AE.E7.9A.84.E5.BA.93.E5.88.97.E8.A1.A8)
+
+<!-- 打包上传 -->

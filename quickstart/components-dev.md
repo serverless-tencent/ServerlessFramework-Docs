@@ -55,9 +55,9 @@ xxxxxxxx
 
 请使用微信扫描上方二维码或者点击下方链接登录
 https://slslogin.qcloud.com/3N2f3dTv
-Login successful for TencentCloud.
+登录成功！
 
-serverless ⚡ framework
+serverless ⚡components
 Action: "deploy" - Stage: "dev" - App: "my-sls-express-18525a69" - Instance: "express-starter"
 
 region: ap-guangzhou
@@ -73,7 +73,7 @@ apigw:
   environment: release
   url:         https://service-mt1d84ea-xxxxxxxxxx.gz.apigw.tencentcs.com/release/
 
-应用控制台: https://console.cloud.tencent.com/ssr/detail?stageName=dev&appName=my-sls-express-xxxxxxxx&instanceName=express-starter&stageList=dev
+应用控制台: https://console.cloud.tencent.com/ssr/detail?stageName=dev&appName=my-sls-express-bv2n5cc&instanceName=express-starter&stageList=dev
 
 102s › express-starter › 部署成功
 ```
@@ -89,8 +89,6 @@ apigw:
 > 所有基础设施信息都默认自动生成，如果需要修改请到项目目录 serverless.yml 文件中进行修改 。
 
 部署成功后访问 API 网关地址就可以访问部署应用。
-
-<!-- TODO：添加网页截图 -->
 
 ## 修改配置
 
@@ -133,7 +131,7 @@ Serverless Framework 提供了快速灵活的调试模式来替代云平台的�
 # 进入 serverless 调试模式
 $ serverless dev
 
-serverless ⚡ framework
+serverless ⚡components
 Dev Mode - 项目监控中，任何变更都会通过日志输出
 
 远程调试链接：ws://127.0.0.1:9222
@@ -166,11 +164,9 @@ express-starter › 监听中 ...
 在代码调试满意之后，通过一下命令部署代码到腾讯云。
 
 ```sh
-# 进入 serverless 调试模式
+# 部署项目代码到云服务器
 $ serverless deploy
 ```
-
-<!-- ## 使用 API  TODO: 添加Invoke 说明-->
 
 ## 查看部署信息
 
@@ -180,7 +176,7 @@ $ serverless deploy
 # 查看已部署应用信息
 $ serverless info
 
-serverless ⚡framework
+serverless ⚡components
 
 
 最后操作:  deploy (a few seconds ago)
@@ -200,9 +196,10 @@ apigw:
   environment: release
   url:         https://service-mt1d84ea-xxxxxxxxxx.gz.apigw.tencentcs.com/release/
 
-应用控制台: https://console.cloud.tencent.com/ssr/detail?stageName=dev&appName=my-sls-express-xxxxxxxx&instanceName=express-starter&stageList=dev
+应用控制台: https://console.cloud.tencent.com/ssr/detail?stageName=dev&appName=my-sls-express-bv2n5cc&instanceName=express-starter&stageList=dev
 
 express-starter › 信息成功加载
 ```
 
-**下一步：[使用组件进行开发](../components/README)**
+**下一步：[了解组件开发(component)指南](../components/README)**
+

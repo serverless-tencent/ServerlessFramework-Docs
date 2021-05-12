@@ -6,11 +6,11 @@ layout: Doc
 
 Serverless Framework 提供了许多流行前端组件来帮助前端使用 serverless 进行前端开发。目前提供的官方组件有
 
-- 静态网站([static-website](https://github.com/serverless-components/tencent-examples/tree/master/website-starter)): 静态 HTML 网站项目
-- React 站点([react-starter](https://github.com/serverless-components/tencent-examples/tree/master/react-starter)): React + Parcel 静态页面模板
-- Vue 站点([vue-starter](https://github.com/serverless-components/tencent-examples/tree/master/vue-starter)): @vue/cli 初始化的静态页面模板
-- Next.js 站点([nextjs-starter](https://github.com/serverless-components/tencent-examples/tree/master/nextjs-starter)): Next.js 开发模板
-- Nuxt.js 站点([nuxtjs-starter](https://github.com/serverless-components/tencent-examples/tree/master/nuxtjs-starter)): Nuxt.js 开发模板
+- 静态网站([static-website](https://github.com/serverless-components/tencent-examples/tree/master/website-starter)): 静态 HTML 网站项目  -- [配置说明](https://github.com/serverless-components/tencent-website/blob/master/docs/configure.md)
+- React 站点([react-starter](https://github.com/serverless-components/tencent-examples/tree/master/react-starter)): React + Parcel 静态页面模板 -- [配置说明](https://github.com/serverless-components/tencent-website/blob/master/docs/configure.md)
+- Vue 站点([vue-starter](https://github.com/serverless-components/tencent-examples/tree/master/vue-starter)): @vue/cli 初始化的静态页面模板 -- [配置说明](https://github.com/serverless-components/tencent-website/blob/master/docs/configure.md)
+- Next.js 站点([nextjs-starter](https://github.com/serverless-components/tencent-examples/tree/master/nextjs-starter)): Next.js 开发模板 -- [配置说明](https://github.com/serverless-components/tencent-nextjs/blob/master/docs/configure.md)
+- Nuxt.js 站点([nuxtjs-starter](https://github.com/serverless-components/tencent-examples/tree/master/nuxtjs-starter)): Nuxt.js 开发模板 -- [配置说明](https://github.com/serverless-components/tencent-nuxtjs/blob/master/docs/configure.md)
 
 使用 Serverless Framework 组件，大开发者得以在国内快速部署网站应用，并通过腾讯云的深度优化，让网站访问速度达到最优。
 
@@ -223,6 +223,7 @@ SSL 证书目前需要到腾讯云的[证书控制台](https://console.cloud.ten
 > 敬请期待
 
 <!-- TODO: 添加相关实例案例
+
 - [React静态站开发实例](../tutorial/fullstack)
 - [查看Next.js静态站开发实例](../tutorial/frontend)
 - [查看Nuxt.js动态站开发实例](../tutorial/backend)

@@ -39,7 +39,7 @@ $ sls init express-starter --name my-express-app
 # 部署组件应用到到云端服务器
 $ sls deploy
 
-# 部署指定目录下的组件实例到云端服务器(适用与多组件应用)
+# 部署指定目录下的组件实例到云端服务器(适用于多组件应用)
 $ sls deploy --target ./src
 ```
 

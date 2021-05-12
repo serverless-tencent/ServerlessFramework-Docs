@@ -77,33 +77,14 @@ Serverless 腾讯内置了许多常用工具库，方便开发者在函数开发
 const COS = require("cos-nodejs-sdk-v5");
 ```
 
-目前包含的库如下:
-| 库名称 | Node.js 12 版本 | Node.js 10 版本 |
-| :--- | :----: | :---: |
-| [cos-nodejs-sdk-v5](https://github.com/tencentyun/cos-nodejs-sdk-v5) | 2.5.20 | 2.5.14 |
-| [base64-js](https://github.com/beatgammit/base64-js) | 1.3.1 | 1.3.1 |
-| [buffer](https://github.com/feross/buffer) | 5.5.0 | 5.4.3 |
-| [crypto-browserify](https://github.com/crypto-browserify/crypto-browserify) | 3.12.0 | 3.12.0 |
-| [ieee754](https://github.com/feross/ieee754) | 1.1.13 | 1.1.13 |
-| [imagemagick](https://github.com/rsms/node-imagemagick) | 0.1.3 | 0.1.3 |
-| [isarray](https://github.com/juliangruber/isarray) | 2.0.5 | 2.0.5 |
-| [jmespath](https://github.com/jmespath/jmespath.js) | 0.15.0 | 0.15.0 |
-| [lodash](https://github.com/lodash/lodash) | 4.17.15 | 4.17.15 |
-| [microtime](https://github.com/wadey/node-microtime) | 3.0.0 | 3.0.0 |
-| [npm](https://github.com/npm/cli) | 6.13.4 | 6.4.1 |
-| [punycode](https://github.com/bestiejs/punycode.js) | 2.1.1 | 2.1.1 |
-| [puppeteer](https://github.com/puppeteer/puppeteer) | 2.1.1 | 2.0.0 |
-| [qcloudapi-sdk](https://www.npmjs.com/package/qcloudapi-sdk) | 0.2.1 | 0.2.1 |
-| [querystring](https://github.com/Gozala/querystring) | 0.2.0 | 0.2.0 |
-| [request](https://github.com/request/request) | 2.88.2 | 2.88.0 |
-| [sax](https://github.com/isaacs/sax-js) | 1.2.4 | 1.2.4 |
-| [scf-nodejs-serverlessdb-sdk](https://github.com/tencentyun/scf-serverlessdb-sdk-nodejs) | 1.1.0 | 1.0.1 |
-| [tencentcloud-sdk-nodejs](https://github.com/tencentcloud/tencentcloud-sdk-nodejs) | 3.0.147 | 3.0.104 |
-| [url](https://github.com/defunctzombie/node-url) | 0.11.0 | 0.11.0 |
-| [uuid](https://github.com/uuidjs/uuid) | 7.0.3 | 3.3.3 |
-| [xml2js](https://github.com/Leonidas-from-XIV/node-xml2js) | 0.4.23 | 0.4.22 |
-| [xmlbuilder](https://github.com/oozcitak/xmlbuilder-js) | 15.1.0 | 13.0.2 |
+<!-- TODO: 指向腾讯云 -->
 
+目前包含的库 请参考[腾讯云说明文档](https://cloud.tencent.com/document/product/583/11060#.E7.8E.AF.E5.A2.83.E5.86.85.E7.9A.84.E5.86.85.E7.BD.AE.E5.BA.93)
 ### 使用自定义工具
 
 Serverless Framework 函数组件支持使用`package.json`中的依赖库，会在完成部署后自动安装跟目录`package.json`中的依赖文件。
+
+<!-- TODO：到控制台开通 -->
+
+<!-- TODO: 确认如何配置安装函数的依赖。-->
+<!-- 1. nodejs 支持。 -->
