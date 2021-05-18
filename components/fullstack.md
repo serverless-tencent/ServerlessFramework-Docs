@@ -4,6 +4,7 @@ menuText: "全栈应用开发"
 layout: Doc
 ---
 
+# 全栈应用开发
 Serverless Framework 通过组件提供了各种框架和模板来进行前端和后端开发，当涉及到全栈开发工作的时候依然可以使用 Serverless Framework 完成全栈开发工作。 这里不在赘述前端开发和后端开发使用 Serverless Framework 需要注意的的内容和用法，详情请参考:
 
 - [前端组件应用开发](./frontend)
@@ -37,5 +38,3 @@ Serverless Framework 通过组件提供了各种框架和模板来进行前端�
 在跟目录的 `serverless.yml` 中可以定义同一的 `app`, 和 `stage` (默认为`dev`) 信息。 然后所有子目录中的 `serverless.yml` 都会继承这两个字段。(如果在子目录定义 `app` 或 `stage` 也会被跟目录的配置覆写，同时这两个字段可以不在子目录的 `serverless.yml` 中定义)。
 
 不同组件资源的配置可以通过 `output` 在不同的组件 `serverless.yml` 配置文件中共享，更多请查看 [Serverless 变量](../basic/variables)。
-
-<!-- ## 初始化顺序说明 -->

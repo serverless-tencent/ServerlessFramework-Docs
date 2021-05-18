@@ -1,10 +1,10 @@
 ---
-title: "组件开发(component)指南"
-menuText: "组件开发(component)指南"
+title: "组件开发"
+menuText: "组件开发"
 layout: Doc
 ---
 
-## 概述
+## 组件开发
 
 Serverless 组件(components)使开发人员能够更轻松地部署 Serverless 应用程序和用例，同时通过组件自定义的环境可以将传统应用(Express, Next.js, Laraval)使用 Serverless Framewok 部署并获得 Serverless 的所有优势。
 
@@ -21,17 +21,17 @@ Serverless 组件(components)使开发人员能够更轻松地部署 Serverless 
 
 目前 Serverless 腾讯提供了以下官方组件模板供广大开发者使用：
 
-- 静态网站([static-website](https://github.com/serverless-components/tencent-examples/tree/master/website-starter)): 静态 HTML 网站项目  -- [配置说明](https://github.com/serverless-components/tencent-website/blob/master/docs/configure.md)
-- React 站点([react-starter](https://github.com/serverless-components/tencent-examples/tree/master/react-starter)): React + Parcel 静态页面模板 -- [配置说明](https://github.com/serverless-components/tencent-website/blob/master/docs/configure.md)
-- Vue 站点([vue-starter](https://github.com/serverless-components/tencent-examples/tree/master/vue-starter)): @vue/cli 初始化的静态页面模板 -- [配置说明](https://github.com/serverless-components/tencent-website/blob/master/docs/configure.md)
-- Next.js 站点([nextjs-starter](https://github.com/serverless-components/tencent-examples/tree/master/nextjs-starter)): Next.js 开发模板 -- [配置说明](https://github.com/serverless-components/tencent-nextjs/blob/master/docs/configure.md)
-- Nuxt.js 站点([nuxtjs-starter](https://github.com/serverless-components/tencent-examples/tree/master/nuxtjs-starter)): Nuxt.js 开发模板 -- [配置说明](https://github.com/serverless-components/tencent-nuxtjs/blob/master/docs/configure.md)
-- Express 应用([express-starter](https://github.com/serverless-components/tencent-examples/tree/master/express-starter)): Express 框架模板(Node.js) -- [配置说明](https://github.com/serverless-components/tencent-express/blob/master/docs/configure.md)
-- Koa 应用([koa-starter](https://github.com/serverless-components/tencent-examples/tree/master/koa-starter)): Koa 框架模板(Node.js) -- [配置说明](https://github.com/serverless-components/tencent-koa/blob/master/docs/configure.md)
-- Egg.js 应用([eggjs-starter](https://github.com/serverless-components/tencent-examples/tree/master/eggjs-starter)): Eggjs 框架模板(Node.js) -- [配置说明](https://github.com/serverless-components/tencent-egg/blob/master/docs/configure.md)
-- Restful API 应用([restful-api](https://github.com/serverless-components/tencent-examples/tree/master/restful-api)): Python + API gateway 模板 -- [配置说明](https://github.com/serverless-components/tencent-scf/blob/master/docs/configure.md)
-- Flask 应用([flask-starter](https://github.com/serverless-components/tencent-examples/tree/master/flask-starter)): Flask 框架模板(Python) -- [配置说明](https://github.com/serverless-components/tencent-flask/blob/master/docs/configure.md)
-- Laravel 应用([laravel-starter](https://github.com/serverless-components/tencent-examples/tree/master/laravel-starter)): Laravle 框架模板(PHP) -- [配置说明](https://github.com/serverless-components/tencent-laravel/blob/master/docs/configure.md)
+- 静态网站([static-website](https://github.com/serverless-components/tencent-examples/tree/master/website-starter)): 静态 HTML 网站项目                    -- [配置说明](https://github.com/serverless-components/tencent-website/blob/master/docs/configure.md)
+- React 站点([react-starter](https://github.com/serverless-components/tencent-examples/tree/master/react-starter)): React + Parcel 静态页面模板       -- [配置说明](https://github.com/serverless-components/tencent-website/blob/master/docs/configure.md)
+- Vue 站点([vue-starter](https://github.com/serverless-components/tencent-examples/tree/master/vue-starter)): @vue/cli 初始化的静态页面模板         -- [配置说明](https://github.com/serverless-components/tencent-website/blob/master/docs/configure.md)
+- Next.js 站点([nextjs-starter](https://github.com/serverless-components/tencent-examples/tree/master/nextjs-starter)): Next.js 开发模板                        -- [配置说明](https://github.com/serverless-components/tencent-nextjs/blob/master/docs/configure.md)
+- Nuxt.js 站点([nuxtjs-starter](https://github.com/serverless-components/tencent-examples/tree/master/nuxtjs-starter)): Nuxt.js 开发模板                        -- [配置说明](https://github.com/serverless-components/tencent-nuxtjs/blob/master/docs/configure.md)
+- Express 应用([express-starter](https://github.com/serverless-components/tencent-examples/tree/master/express-starter)): Express 框架模板(Node.js)   -- [配置说明](https://github.com/serverless-components/tencent-express/blob/master/docs/configure.md)
+- Koa 应用([koa-starter](https://github.com/serverless-components/tencent-examples/tree/master/koa-starter)): Koa 框架模板(Node.js)                       -- [配置说明](https://github.com/serverless-components/tencent-koa/blob/master/docs/configure.md)
+- Egg.js 应用([eggjs-starter](https://github.com/serverless-components/tencent-examples/tree/master/eggjs-starter)): Eggjs 框架模板(Node.js)              -- [配置说明](https://github.com/serverless-components/tencent-egg/blob/master/docs/configure.md)
+- Restful API 应用([restful-api](https://github.com/serverless-components/tencent-examples/tree/master/restful-api)): Python + API gateway 模板     -- [配置说明](https://github.com/serverless-components/tencent-scf/blob/master/docs/configure.md)
+- Flask 应用([flask-starter](https://github.com/serverless-components/tencent-examples/tree/master/flask-starter)): Flask 框架模板(Python)                  -- [配置说明](https://github.com/serverless-components/tencent-flask/blob/master/docs/configure.md)
+- Laravel 应用([laravel-starter](https://github.com/serverless-components/tencent-examples/tree/master/laravel-starter)): Laravle 框架模板(PHP)             -- [配置说明](https://github.com/serverless-components/tencent-laravel/blob/master/docs/configure.md)
 - 全栈应用([fullstack](https://github.com/serverless-components/tencent-examples/tree/master/fullstack)): vue.js + express + postgres 应用模板
   - [Website 配置说明](https://github.com/serverless-components/tencent-website/blob/master/docs/configure.md)，[Express 配置说明](https://github.com/serverless-components/tencent-express/blob/master/docs/configure.md)，[PostgreSQL 配置说明](https://github.com/serverless-components/tencent-postgresql/blob/master/docs/configure.md)，[VPC 配置说明](https://github.com/serverless-components/tencent-vpc/blob/master/docs/configure.md)
 

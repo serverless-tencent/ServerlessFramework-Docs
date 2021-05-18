@@ -4,6 +4,8 @@ menuText: "后端组件应用开发"
 layout: Doc
 ---
 
+# 后端组件应用开发
+
 Serverless Framework 提供了许多流行前端组件来帮助前端使用 serverless 进行前端开发。目前提供的官方组件有
 
 - Express 应用([express-starter](https://github.com/serverless-components/tencent-examples/tree/master/express-starter)): Express 框架模板(Node.js)
@@ -66,11 +68,3 @@ inputs:
 > `output` 用来引用其他服务资源的变量信息，通过此变量可以将配置分散到不同的 `serverless.yml` 中来消除耦合。
 
 更多关于变量的内容请查看[Serverless 变量](../basic/variables)
-
-<!-- ## 触发器 TODO: 添加关于触发器的使用说明 -->
-
-<!-- ## 日志 TODO: 添加关于日志的说明 @Oliver.W -->
-
-**下一步：查看开发案例**
-
-> 敬请期待

@@ -1,8 +1,10 @@
 ---
-title: "函数开发(function)指南"
-menuText: "函数开发(function)指南"
+title: "函数开发"
+menuText: "函数开发"
 layout: Doc
 ---
+
+# 函数开发
 
 > 与国际版本不同，Serverless 中国通过 SCF 组件实现了国际版的函数开发功能。
 

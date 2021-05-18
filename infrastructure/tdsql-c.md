@@ -4,9 +4,7 @@ menuText: "TDSQL-C 数据库"
 layout: Doc
 ---
 
-<!-- TODO: 更新tdsql-c使用说明和配置示例。 -->
-
-## 操作场景
+# TDSQL-C 数据库
 
 云原生数据库 TDSQL-C（Cloud Native Database TDSQL-C，TDSQL-C）是腾讯云自研的新一代高性能高可用的企业级分布式云数据库。融合了传统数据库、云计算与新硬件技术的优势，保障数据安全可靠。
 

@@ -4,9 +4,7 @@ menuText: "统计分析"
 layout: Doc
 ---
 
-<!-- TODO: 更新 腾讯统计分析 说明 -->
-
-<!-- Upadate 0430: 此处并无通用统计分析能力，仅针对express、nextjs、nuxtjs 三个组件框架进行了简单自定义监控上报，也只是控制台简单展示 -->
+# 统计分析
 
 针对 Express、Next.js、Nuxt.js 三个框架，Serverless Framework 组件支持自定义监控数据的采集和上报。通过[腾讯云应用控制台](https://console.cloud.tencent.com/sls) 的【应用监控】页面，您可以查看项目部署后输出的基本信息、项目请求次数、项目报错统计等多项监控指标，方便您轻松实现项目的管理运维。
 

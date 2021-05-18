@@ -4,9 +4,7 @@ menuText: "域名和 HTTPS"
 layout: Doc
 ---
 
-<!-- TODO: 更新 配置自定义域名 说明 -->
-
-## 操作场景
+# 域名和 HTTPS
 
 通过 Serverless Component 快速构建一个 Serverless Web 网站服务后，如果您希望配置自定义域名及支持 HTTPS 的访问，则可以按照本文提供的两种方案快速配置。
 

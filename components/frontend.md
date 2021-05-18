@@ -4,6 +4,8 @@ menuText: "前端组件应用开发"
 layout: Doc
 ---
 
+# 前端组件应用开发
+
 Serverless Framework 提供了许多流行前端组件来帮助前端使用 serverless 进行前端开发。目前提供的官方组件有
 
 - 静态网站([static-website](https://github.com/serverless-components/tencent-examples/tree/master/website-starter)): 静态 HTML 网站项目  -- [配置说明](https://github.com/serverless-components/tencent-website/blob/master/docs/configure.md)
@@ -220,12 +222,7 @@ SSL 证书目前需要到腾讯云的[证书控制台](https://console.cloud.ten
 
 **下一步：查看开发案例**
 
-> 敬请期待
-
-<!-- TODO: 添加相关实例案例
-
 - [React静态站开发实例](../tutorial/fullstack)
 - [查看Next.js静态站开发实例](../tutorial/frontend)
 - [查看Nuxt.js动态站开发实例](../tutorial/backend)
 
--->

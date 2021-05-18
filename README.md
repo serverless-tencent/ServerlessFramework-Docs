@@ -4,7 +4,7 @@ menuText: "Serverless Framework 介绍"
 layout: Doc
 ---
 
-# Serverless 简介
+# ⚡️ Serverless 简介
 
 Serverless Framework 是业界非常受欢迎的无服务器应用框架，通过与众多一流云供应商如腾讯云，AWS 等的紧密合作，为广大开发者提供无需关心底层基础设施，即可编写和部署代码的无服务开发体验。
 
@@ -24,9 +24,9 @@ Serverless 为函数应用开发者提供了一个统一的开发框架，通过
 
 ### 组件应用开发
 
-Serveless 为使用传统框架(如：Nextjs, Express, Django 等)开发的应用提供了运行环境支持，通过 serverless 开发者可以继续使用传统框架开发应用，也可以通过简单改造将原有应用迁移到 serverless 平台。
+Serveless 为使用传统框架(如：Nextjs, Express, Django 等)开发的应用提供了运行环境支持，通过 serverless 组件开发者可以继续使用传统框架开发应用，也可以通过简单改造将原有应用迁移到 serverless 平台。
 
-开始 [使用 serverless 开发传统应用](./quickstart/components-dev.md)
+开始 [使用 serverless 开发组件应用](./quickstart/components-dev.md)
 
 ### SaaS 应用托管
 
@@ -64,16 +64,20 @@ Serverless 为使用 SaaS 应用(如：Wordpress 等)提供了方便的运行环
 
 Serverless Framework 是基于下一代公有云服务提供的弹性扩容，并按量付费的无服务器计算解决方案，从而大大降低构建和维护应用的开销，供开发者专注业务逻辑开发。
 
-### Serverless Tencent
+### [//]: Serverless Tencent
 
-Serverless Tencent 是 Serverless 的腾讯云版本，主要为广大中国开发者提供函数服务开发能力。 同时支持事件触发，弹性扩容，并且按量付费。相比于 serverless, serverless-tencent 使用更简洁，高效，同时也内置了众多 serverless plugin 功能支持。
+[//]:  Serverless Tencent 是 Serverless 的腾讯云版本，主要为广大中国开发者提供函数服务开发能力。 同时支持事件触发，弹性扩容，并且按量付费。相比于 serverless, serverless-tencent 使用更简洁，高效，同时也内置了众多 serverless plugin 功能支持。
 
-详细介绍可以参考 [Github 上的 Serverless 项目](https://github.com/serverless/serverless/blob/master/README_CN.md)。
+[//]: 详细介绍可以参考 [Github 上的 Serverless 项目](https://github.com/serverless/serverless/blob/master/README_CN.md)。
 
 ### Serverless Components
 
 Serverless Components 通过定制的基础设施支持更多开发场景，如 Express, Next.js, Wordpress 等。同时具有 serverless 的弹性扩缩容，按量付费等优势。让开发者在不改变代码和开发习惯的情况下获得 serverless 的强大优势。
 
 详细介绍可以参考 [Github 上的 Serverless Components 项目](https://github.com/serverless/components/blob/master/README.cn.md)。
+
+#### SCF Component
+
+目前腾讯云的函数开发也通过组件提供了支持，可以使用 SCF 组件的对应运行时组件来进行函数开发。组件相关的命令和用法对于函数 SCF 组件 同样适用。
 
 **下一步：[开始使用 serverless](./quickstart/installation)**

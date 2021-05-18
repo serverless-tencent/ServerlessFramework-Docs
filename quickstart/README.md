@@ -4,6 +4,8 @@ menuText: "快速开始"
 layout: Doc
 ---
 
+# 快速开始
+
 Serverless Framework 通过 CLI 命令以及配置文件就可以完成全部配置，部署管理操作。
 
 与国际版本不同，Serverless 在腾讯云也是通过组件方式来进行函数应用的开发。（使用 SCF Components 组件）。

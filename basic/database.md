@@ -4,6 +4,8 @@ menuText: "数据库集成"
 layout: Doc
 ---
 
+# 数据库集成
+
 目前，[腾讯云原生数据库 TDSQL-C](https://cloud.tencent.com/document/product/1003/30505) 已支持 Serverless MySQL 版本， 做到按实际使用的计算和存储量计费，按秒计量，按小时结算。您可以通过 Serverless Framework 的 CynosDB 组件，快速创建 TDSQL-C Serverless 数据库。
 
 下面的教程将以 Node.js 开发语言的函数为例，指导您如何快速创建 TDSQL-C Serverless MySQL 实例，并在云函数中进行调用：
@@ -231,7 +233,6 @@ def main_handler(event, context):
 #### Node.js
 Node.js 支持使用连接池进行连接，连接池具备自动重连功能，可有效避免因云函数底层或者数据库释放连接造成的连接不可用情况。示例代码如下：
 >?使用连接池前需先安装 **mysql2** 依赖包，详情请参见 [依赖安装](https://cloud.tencent.com/document/product/583/39780)。
->
 ```nodejs
 'use strict';
 

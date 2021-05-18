@@ -4,6 +4,8 @@ menuText: "组件应用开发"
 layout: Doc
 ---
 
+# 组件应用开发
+
 Serverless Components 是 Serverless Framework 的一部分，通过定制的运行环境带来了更多的对传统框架应用的支持，让传统框架应用也可以获得 serverless 的优势，同时不需要花费时间来配置传统框架应用的运行时。
 
 > 本教程以开发一个 Express API 的案例说明如何通过 Serverless Components 来使用腾讯 SCF 和网关构建一个后端 API 应用，并获得 serverless 的自动扩容并按量付费能力。

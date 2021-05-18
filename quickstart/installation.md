@@ -1,20 +1,16 @@
 ---
-title: "开始使用 serverless"
-menuText: "开始使用 serverless"
+title: "安装 Serverless CLI"
+menuText: "安装 Serverless CLI"
 layout: Doc
 ---
 
-# 欢迎使用 serverless ⚡️
+# 安装 Serverless CLI
 
 您可以通过 Serverless CLI 命令行工具来 创建，开发，调试，部署，管理，删除你的 Serverless 应用。
 
 通过 [NPM 安装](#npm) 或 [二进制安装](#binary) 方式，来安装 Serverless CLI 并开始 Serverless 开发。
 
-## 安装&升级 Serverless CLI
-
-<span id="npm"></span>
-
-### 通过 npm
+### 通过 npm 安装 & 升级
 
 npm 是 Node.js 的包管理工具, 安装前需要确定您的环境中已安装好了 Node.js (版本 > 10)，更多请查看 [Node.js 安装指南](https://nodejs.org/zh-cn/download/) 。
 
@@ -34,7 +30,7 @@ $ npm update -g serverless
 
 <span id="binary"></span>
 
-### 通过安装包
+### 通过安装包安装 & 升级
 
 如果您的本地环境没有安装 Node.js，您可以直接使用安装包进行安装：
 

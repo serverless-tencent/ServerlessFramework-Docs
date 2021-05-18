@@ -4,10 +4,11 @@ menuText: "Python 函数应用开发"
 layout: Doc
 ---
 
+# Python 函数应用开发
 目前支持的 Python 开发语言包括如下版本：
 
-Python 2.7
-Python 3.6
+- Python 2.7
+- Python 3.6
 
 ## 定义函数
 
@@ -53,10 +54,11 @@ def main_handler(event, context):
 
 ## 依赖库
 
-### 使用内建库
-
-<!-- 内建库腾讯云 -->
+### 使用内建的库
 
 目前包含的库请参考[腾讯云说明文档](https://cloud.tencent.com/document/product/583/55592#.E5.86.85.E7.BD.AE.E7.9A.84.E5.BA.93.E5.88.97.E8.A1.A8)
 
-<!-- 打包上传 -->
+### 使用自定义库
+
+目前仅支持将自定义的本地库打包上传的使用方式。
+

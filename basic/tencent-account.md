@@ -1,12 +1,10 @@
 ---
-title: "腾讯云账号控制"
-menuText: "腾讯云账号控制"
+title: "腾讯云账号"
+menuText: "腾讯云账号"
 layout: Doc
 ---
 
-<!-- TODO: 更新 账号登陆 说明 -->
-
-### 使用前提
+# 腾讯云账号
 
 Serverless Framework 帮助您将项目快速部署到**腾讯云 Serverless 平台**，因此在部署前，请确认您已经[注册腾讯云账号](https://cloud.tencent.com/document/product/378/17985)并完成[实名认证](https://cloud.tencent.com/document/product/378/10495)。
 

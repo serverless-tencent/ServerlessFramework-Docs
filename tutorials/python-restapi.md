@@ -4,9 +4,7 @@ menuText: "Python Restful API"
 layout: Doc
 ---
 
-<!-- TODO: 检查并更新教程 -->
-
-## 操作场景
+# Python Restful API
 
 REST API 模板使用 Tencent SCF 组件及其触发器能力，方便的在腾讯云创建，配置和管理一个 REST API 应用。您可以通过 Serverless SCF 组件快速构建一个 REST API 应用，实现 GET/PUT 操作。
 

@@ -4,6 +4,7 @@ menuText: "Node.js 函数应用开发"
 layout: Doc
 ---
 
+# Node.js 函数应用开发
 目前 腾讯 SCF 对于支持的 Node.js 运行时有
 
 - Node.js 10.15
@@ -69,7 +70,7 @@ console.info(...);
 
 ## 依赖库
 
-### 使用内建的工具库
+### 使用内建的库
 
 Serverless 腾讯内置了许多常用工具库，方便开发者在函数开发过程中使用，具体使用方法如下。
 
@@ -77,14 +78,24 @@ Serverless 腾讯内置了许多常用工具库，方便开发者在函数开发
 const COS = require("cos-nodejs-sdk-v5");
 ```
 
-<!-- TODO: 指向腾讯云 -->
-
 目前包含的库 请参考[腾讯云说明文档](https://cloud.tencent.com/document/product/583/11060#.E7.8E.AF.E5.A2.83.E5.86.85.E7.9A.84.E5.86.85.E7.BD.AE.E5.BA.93)
-### 使用自定义工具
+### 使用自定义库
 
-Serverless Framework 函数组件支持使用`package.json`中的依赖库，会在完成部署后自动安装跟目录`package.json`中的依赖文件。
+Serverless Framework 函数组件支持使用`package.json`中的依赖库，需要在函数配置中将配置`installDependency` 设置为`true`就会在完成部署后自动安装跟目录`package.json`中的依赖文件。示例配置如下
 
-<!-- TODO：到控制台开通 -->
-
-<!-- TODO: 确认如何配置安装函数的依赖。-->
-<!-- 1. nodejs 支持。 -->
+```yml
+inputs:
+  src: ./ 
+  handler: index.main_handler 
+  region: ap-guangzhou
+  runtime: Nodejs10.15 
+  memorySize: 128 
+  timeout: 3 
+  installDependency: false # Config for auto install dependencies
+  events: 
+    - apigw:
+        parameters:
+          endpoints:
+            - path: /
+              method: GET
+```

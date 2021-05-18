@@ -4,7 +4,7 @@ menuText: "项目结构"
 layout: Doc
 ---
 
-<!-- TODO: 更新 目录结构 说明 -->
+# 项目结构
 
 Serverless Framework 基于 [Serverless 组件](https://github.com/serverless/components/blob/master/README.cn.md) 完成应用的部署，对于本地项目结构没有强制的规定，但为了便于管理与部署，我们推荐您采用以下几种目录结构组织您的应用：
 

@@ -4,6 +4,7 @@ menuText: "函数应用开发"
 layout: Doc
 ---
 
+# 函数应用开发
 通过 Serverless CLI 的交互命令可以快速创建一个 Serverless 项目，函数项目请选择 `scf-starter`。
 
 > 与国际版本不同，Serverless 中国通过 SCF 组件实现了国际版的函数开发功能。同时用户可以使方便的整合更多的腾讯云基础设施。详细说明请查看[函数开发(function)指南](../function/README.md)。

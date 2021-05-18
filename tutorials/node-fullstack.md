@@ -4,9 +4,7 @@ menuText: "Node.js 全栈应用"
 layout: Doc
 ---
 
-<!-- TODO: 检查并更新教程 -->
-
-## 操作场景
+# Node.js 全栈应用
 
 该模板可以快速部署一个基于 Vue + Express + PostgreSQL 的全栈 Serverless 应用。主要包含以下组件：
 

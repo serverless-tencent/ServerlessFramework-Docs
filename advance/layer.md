@@ -4,7 +4,7 @@ menuText: "层部署"
 layout: Doc
 ---
 
-<!--- TODO: 更新 Layer 说明 --->
+# 层部署
 
 由于云函数限制，目前只支持上传小于 50MB 的代码包，当您的项目过大时，您可以将依赖放在层中而不是部署包中，可确保部署包保持较小的体积。层的具体使用请参考 [层管理相关操作](https://cloud.tencent.com/document/product/583/45760)。
 

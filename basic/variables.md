@@ -4,7 +4,7 @@ menuText: "Serverless 变量"
 layout: Doc
 ---
 
-<!-- TODO: 更新 环境变量 说明 -->
+# Serverless 变量
 
 Serverless Framework 支持在项目部署过程中，直接引用其它项目输出的变量信息或者环境变量信息，简化开发步骤，方便应用组织编排。
 

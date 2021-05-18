@@ -4,9 +4,7 @@ menuText: "COS 对象存储"
 layout: Doc
 ---
 
-<!-- TODO: 更新COS使用说明和配置示例。 -->
-
-## 操作场景
+# COS 对象存储
 
 对象存储（Cloud Object Storage，COS）是腾讯云提供的一种存储海量文件的分布式存储服务，用户可通过网络随时存储和查看数据。
 

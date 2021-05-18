@@ -4,12 +4,7 @@ menuText: "API 网关组件"
 layout: Doc
 ---
 
-<!-- TODO: 更新网关使用说明和配置示例。 -->
-
-<!-- 目的用途：网关作用，路径，域名，protocal，ssl， -->
-<!-- https://github.com/serverless-components/tencent-apigateway/blob/master/docs/configure.md -->
-
-## 操作场景
+# API 网关组件
 
 API 网关（API Gateway）是 API 托管服务，提供 API 的完整生命周期管理，包括创建、维护、发布、运行、下线等。您可使用 API Gateway 封装自身业务，将您的数据、业务逻辑或功能安全可靠的开放出来，用以实现自身系统集成、以及与合作伙伴的业务连接。
 

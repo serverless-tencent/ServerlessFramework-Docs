@@ -1,10 +1,10 @@
 ---
-title: "部署基于 OCR 的文字识别应用"
-menuText: "部署基于 OCR 的文字识别应用"
+title: "Node.js OCR 文字识别"
+menuText: "Node.js OCR 文字识别"
 layout: Doc
 ---
 
-<!-- TODO: 检查并更新教程 -->
+# Node.js OCR 文字识别
 
 腾讯云文字识别（OCR）基于行业前沿的深度学习技术，将图片上的文字内容智能识别成为可编辑的文本，支持多场景下的印刷体、手写体文字识别，覆盖不同场景下的文字识别需求。
 通过 Serverless Framework Component 和 OCR SDK， 您可快速部署一个基于 COS + API + SCF 的通用文字识别应用，主要包含以下组件：

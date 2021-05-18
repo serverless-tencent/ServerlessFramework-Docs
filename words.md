@@ -1,5 +1,3 @@
-<!-- ？ 不确定内容 -->
-
 ## 产品名词翻译
 
 - Serverless 产品
@@ -31,4 +29,9 @@
 ## 翻译
 
 auto-scalling: 自动扩容
-dev-mode: 调试模式
+dev-mode: 远程开发模式
+stage: 环境
+region: 地区
+commands: 命令
+template: 模板
+components: 组件
