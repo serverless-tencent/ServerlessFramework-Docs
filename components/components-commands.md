@@ -157,6 +157,17 @@ $ sls remove --target ./src
 管理全局授权信息
 
 ```sh
+# 设置默认的全局身份认证信息
+$ sls credentials set --i MySecretId -k MySecretKey
+
+# 覆写全局身份认证信息名称为 myaccount 的授权信息
+$ sls credentials set --i MySecretId -k MySecretKey -n myaccount -o
+
+# 查看当前的全局用户授权信息
+$ sls credentials list
+
+# 删除全局身份认证信息名称为 myaccount 的授权信息
+$ sls credentials remove -n myaccount
 ```
 
 #### 命令选项
