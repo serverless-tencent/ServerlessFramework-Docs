@@ -35,3 +35,5 @@ region: 地区
 commands: 命令
 template: 模板
 components: 组件
+console: 应用中心
+registry: 注册中心 
