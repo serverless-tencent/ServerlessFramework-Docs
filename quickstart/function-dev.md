@@ -5,9 +5,10 @@ layout: Doc
 ---
 
 # 函数应用开发
+
 通过 Serverless CLI 的交互命令可以快速创建一个 Serverless 项目，函数项目请选择 `scf-starter`。
 
-> 与国际版本不同，Serverless 中国通过 SCF 组件实现了国际版的函数开发功能。同时用户可以使方便的整合更多的腾讯云基础设施。详细说明请查看[函数开发(function)指南](../function/README.md)。
+> 与国际版本不同，Serverless 中国通过 SCF 组件实现了国际版的函数开发功能。同时用户可以使方便的整合更多的腾讯云基础设施。详细说明请查看[函数开发(function)指南](../function/README)。
 
 ## 初始化函数应用
 
@@ -22,21 +23,21 @@ $ serverless
 
 ```sh
 Serverless: 当前未检测到 Serverless 项目，是否希望新建一个项目？ Yes
-Serverless: 请选择你希望创建的 Serverless 应用 
+Serverless: 请选择你希望创建的 Serverless 应用
 
-  react-starter - 快速部署一个 React.js 应用 
-  restful-api - 快速部署一个 REST API 使用 python + API gateway 
-❯ scf-starter - 快速部署一个云函数 
-  vue-starter - 快速部署一个 Vue.js 基础应用 
-  website-starter - 快速部署一个静态网站 
-  eggjs-starter - 快速部署一个Egg.js 基础应用 
-  express-starter - 快速部署一个 Express.js 基础应用 
+  react-starter - 快速部署一个 React.js 应用
+  restful-api - 快速部署一个 REST API 使用 python + API gateway
+❯ scf-starter - 快速部署一个云函数
+  vue-starter - 快速部署一个 Vue.js 基础应用
+  website-starter - 快速部署一个静态网站
+  eggjs-starter - 快速部署一个Egg.js 基础应用
+  express-starter - 快速部署一个 Express.js 基础应用
 
-Serverless: 请选择应用的运行时 
-  scf-golang - 快速部署一个 golang 云函数 
-❯ scf-nodejs - 快速部署一个 nodejs 云函数 
-  scf-php - 快速部署一个 PHP 云函数 
-  scf-python - 快速部署一个 python 云函数 
+Serverless: 请选择应用的运行时
+  scf-golang - 快速部署一个 golang 云函数
+❯ scf-nodejs - 快速部署一个 nodejs 云函数
+  scf-php - 快速部署一个 PHP 云函数
+  scf-python - 快速部署一个 python 云函数
 
 Serverless: 请输入项目名称 my-scf-nodejs
 Serverless: 正在安装 scf-nodejs 应用...
@@ -71,8 +72,8 @@ handler:      index.main_handler
 memorySize:   128
 lastVersion:  $LATEST
 traffic:      1
-triggers: 
-  - 
+triggers:
+  -
     NeedCreate:  true
     created:     true
     serviceId:   service-mqkih33e
@@ -80,8 +81,8 @@ triggers:
     subDomain:   service-mqkih33e-xxxxxxxx.gz.apigw.tencentcs.com
     protocols:   http
     environment: release
-    apiList: 
-      - 
+    apiList:
+      -
         path:            /
         method:          GET
         apiName:         index
@@ -90,8 +91,8 @@ triggers:
         businessType:    NORMAL
         isBase64Encoded: false
         apiId:           api-97zm7fws
-        internalDomain:  
-    urls: 
+        internalDomain:
+    urls:
       - http://service-mqkih33e-xxxxxxxx.gz.apigw.tencentcs.com/release/
 
 应用控制台: https://serverless.cloud.tencent.com/apps/my-scf-nodejs-7398d46a/scf-nodejs/dev
@@ -99,7 +100,7 @@ triggers:
 21s › scf-nodejs › 执行成功
 ```
 
-> 如果有使用全局密钥有可能会与上面流程不同，关于登陆的更多方式和说明请查看[腾讯云账号控制](../basic/tencent-account.md)相关内容获得更详细帮助。
+> 如果有使用全局密钥有可能会与上面流程不同，关于登陆的更多方式和说明请查看[腾讯云账号控制](../basic/tencent-account)相关内容获得更详细帮助。
 
 部署成功后会显示
 
@@ -191,8 +192,8 @@ handler:      index.main_handler
 memorySize:   128
 lastVersion:  $LATEST
 traffic:      1
-triggers: 
-  - 
+triggers:
+  -
     NeedCreate:  true
     created:     true
     serviceId:   service-mqkih33e
@@ -200,8 +201,8 @@ triggers:
     subDomain:   service-mqkih33e-xxxxxxxxxx.gz.apigw.tencentcs.com
     protocols:   http
     environment: release
-    apiList: 
-      - 
+    apiList:
+      -
         path:            /
         method:          GET
         apiName:         index
@@ -210,8 +211,8 @@ triggers:
         businessType:    NORMAL
         isBase64Encoded: false
         apiId:           api-97zm7fws
-        internalDomain:  
-    urls: 
+        internalDomain:
+    urls:
       - http://service-mqkih33e-xxxxxxxxxx.gz.apigw.tencentcs.com/release/
 
 应用控制台: https://serverless.cloud.tencent.com/apps/my-scf-nodejs-7398d46a/scf-nodejs/dev
