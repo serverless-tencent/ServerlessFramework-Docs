@@ -14,19 +14,19 @@ Serverless Framework 通过 CLI 工具与腾讯云紧密合作，为中国用户
 
 ## 开始使用
 
-通过 Serverless CLI 工具可以创建，调试，部署，查看，移除 serverless 应用，马上[安装 Serverless CLI](./quickstart/installation.md) 并使用。
+通过 Serverless CLI 工具可以创建，调试，部署，查看，移除 serverless 应用，马上[安装 Serverless CLI](./quickstart/installation) 并使用。
 
 ### 函数应用开发
 
 Serverless 为函数应用开发者提供了一个统一的开发框架，通过 serverelss 开发者可以快速开发，调试，部署。结合静态站点，API 网关，数据库等其他云上资源，函数应用拥有更强大的能力和使用场景。
 
-开始 [使用 serverless 开发函数应用](./quickstart/function-dev.md)
+开始 [使用 serverless 开发函数应用](./quickstart/function-dev)
 
 ### 组件应用开发
 
 Serveless 为使用传统框架(如：Nextjs, Express, Django 等)开发的应用提供了运行环境支持，通过 serverless 组件开发者可以继续使用传统框架开发应用，也可以通过简单改造将原有应用迁移到 serverless 平台。
 
-开始 [使用 serverless 开发组件应用](./quickstart/components-dev.md)
+开始 [使用 serverless 开发组件应用](./quickstart/components-dev)
 
 ### SaaS 应用托管
 
@@ -74,6 +74,6 @@ Serverless Components 通过定制的基础设施支持更多开发场景，如 
 
 目前腾讯云的函数开发也通过组件提供了支持，可以使用 SCF 组件的对应运行时组件来进行函数开发。组件相关的命令和用法对于函数 SCF 组件 同样适用。
 
-> 关于 Serverless Framework 的任何使用问题、建议或者经验分享欢迎到 [Serverless 中文讨论社区](https://github.com/serverless/serverless-tencent/discussions) 分享讨论。同时使用中遇到的 bug 也欢迎通过 [BUG反馈](https://github.com/serverless/serverless-tencent/issues/new/choose) 提交并追踪。
+> 关于 Serverless Framework 的任何使用问题、建议或者经验分享欢迎到 [Serverless 中文讨论社区](https://github.com/serverless/serverless-tencent/discussions) 分享讨论。同时使用中遇到的 bug 也欢迎通过 [BUG 反馈](https://github.com/serverless/serverless-tencent/issues/new/choose) 提交并追踪。
 
 **下一步：[开始使用 serverless](./quickstart/installation)**

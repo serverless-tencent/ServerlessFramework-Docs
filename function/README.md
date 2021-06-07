@@ -61,7 +61,7 @@ Serverless Framework 通过 SCF Component 提供了基于腾讯 SCF 的函数开
 }
 ```
 
-同时 Serverless Framework 还支持的事件有 [API 网关触发器](https://cloud.tencent.com/document/product/583/12513), [COS 触发器](https://cloud.tencent.com/document/product/583/9707), [CLS 触发器](https://cloud.tencent.com/document/product/583/49587), [定时触发器](https://cloud.tencent.com/document/product/583/9708), [CMQ Topic 触发器](https://cloud.tencent.com/document/product/583/11517), [CKafka 触发器](https://cloud.tencent.com/document/product/583/17530), [MPS 触发器](https://cloud.tencent.com/document/product/583/50833), [CLB 触发器](https://cloud.tencent.com/document/product/583/52635), [云 API 触发器](https://cloud.tencent.com/document/product/583/18198)， 更多请查看[触发器配置](../basic/trigger.md)。
+同时 Serverless Framework 还支持的事件有 [API 网关触发器](https://cloud.tencent.com/document/product/583/12513), [COS 触发器](https://cloud.tencent.com/document/product/583/9707), [CLS 触发器](https://cloud.tencent.com/document/product/583/49587), [定时触发器](https://cloud.tencent.com/document/product/583/9708), [CMQ Topic 触发器](https://cloud.tencent.com/document/product/583/11517), [CKafka 触发器](https://cloud.tencent.com/document/product/583/17530), [MPS 触发器](https://cloud.tencent.com/document/product/583/50833), [CLB 触发器](https://cloud.tencent.com/document/product/583/52635), [云 API 触发器](https://cloud.tencent.com/document/product/583/18198)， 更多请查看[触发器配置](../basic/trigger)。
 
 ### Context 运行时
 
@@ -96,7 +96,7 @@ Context 包括了当前调用的执行超时时间，内存限制，以及当次
 
 > 更多使用介绍请查看[函数应用开发](../quickstart/function-dev).
 
-Serverless Framework 支持创建以下语言的函数应用模板 
+Serverless Framework 支持创建以下语言的函数应用模板
 
 - Node.js 函数应用([scf-nodejs](https://github.com/serverless-components/tencent-examples/tree/master/scf-nodejs)): Node.js 10.15 和 Node.js12.16
 - Python 函数应用([scf-python](https://github.com/serverless-components/tencent-examples/tree/master/scf-python)): Python2.7 和 Python3.6

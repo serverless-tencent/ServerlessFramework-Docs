@@ -61,7 +61,7 @@ serverless remove
 
 执行 `serverless deploy` 时，根据 serverless.yml 文件中的配置对云函数资源进行创建或更新。一份简单的 serverlesss.yml 文件如下：
 
-> **说明**：配置详情请参考 [全量配置文档](../basic/yaml.md)。
+> **说明**：配置详情请参考 [全量配置文档](../basic/yaml)。
 
 ```
 #scf组件配置样例

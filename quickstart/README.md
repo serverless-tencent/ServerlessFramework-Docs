@@ -56,7 +56,7 @@ inputs: # 组件部署所需的参数
     environment: release # 网关发布环境。[test, prepub，release]
 ```
 
-> 不同组件的配置不完全一样，具体组件支持的参数配置相见相关组件[说明及示例](../components/README.md)。
+> 不同组件的配置不完全一样，具体组件支持的参数配置相见相关组件[说明及示例](../components/README)。
 
 ## 管理应用
 
@@ -76,7 +76,7 @@ $ serverless dev
 $ serverless remove
 ```
 
-> 组件命令需要在组件项目目录中执行。更多关于命令的说明请查看 [组件命令](../components/components-commands.md) 和 [函数命令](../function/function-commands.md)
+> 组件命令需要在组件项目目录中执行。更多关于命令的说明请查看 [组件命令](../components/components-commands) 和 [函数命令](../function/function-commands)
 
 **下一步：**
 
